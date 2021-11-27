@@ -1,0 +1,36 @@
+// load custom font from google fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import "~bootstrap/scss/functions";
+// redefine variables not dependent on anything else
+
+// global variables
+$primary: #92400e;
+$secondary: #b5866e;
+$light: #fff6ee;
+$dark: #402e32;
+
+// theme color variables
+
+// font family
+$headings-font-family: "Montserrat", sans-serif;
+$font-family-base: "Roboto", sans-serif;
+
+// links
+
+// import variables and mixins files (so you can use them below)
+// any redefined vars above will be incorporated into the files (e.g. in maps)
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// utility api - import utility file first
+// import bootstrap whole sass lib (incorporates all above redefined vars & values)
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background: rgba($light, 0.3);
+}
+
+//import custom components
+@import "./footer";
+@import "./navigation";
