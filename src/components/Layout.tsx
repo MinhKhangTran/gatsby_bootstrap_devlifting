@@ -7,15 +7,15 @@ import "@reach/skip-nav/styles.css";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
-      <SkipNavLink />
-      <div>
+    <div>
+      <header role="banner">
+        <SkipNavLink />
         <Navigation />
         <SkipNavContent />
-        <main>{children}</main>
-        <Footer />
-      </div>
-    </>
+      </header>
+      <main role="main">{children}</main>
+      <Footer />
+    </div>
   );
 };
 

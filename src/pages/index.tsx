@@ -1,5 +1,10 @@
 import * as React from "react";
+import CTA from "../components/CTA";
+import FAQ from "../components/FAQ";
+import Features from "../components/Features";
+import Hero from "../components/Hero";
 import Layout from "../components/Layout";
+import Process from "../components/Process";
 import SEO from "../components/Seo";
 
 // markup
@@ -7,10 +12,11 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Homepage" />
-      <h1 className="bg-primary text-white">Hi Bootstrap and Gatsby</h1>
-      <h1 className="bg-secondary text-white">Hi Bootstrap and Gatsby</h1>
-      <h1 className="bg-light text-white">Hi Bootstrap and Gatsby</h1>
-      <h1 className="bg-dark text-white">Hi Bootstrap and Gatsby</h1>
+      <Hero />
+      <Features />
+      <Process />
+      <FAQ />
+      <CTA />
     </Layout>
   );
 };
