@@ -35,6 +35,15 @@ body {
   background: rgba($light, 0.3);
 }
 
+.section {
+  margin-top: 4rem;
+}
+@media screen and (min-width: 992px) {
+  .section {
+    margin-top: 7rem;
+  }
+}
+
 //import custom components
 @import "./footer";
 @import "./navigation";

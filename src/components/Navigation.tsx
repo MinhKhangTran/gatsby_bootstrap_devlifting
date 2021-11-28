@@ -23,7 +23,7 @@ const Navigation = () => {
         <Navbar.Collapse id="basic-navbar-nav" data-cy="nav_collapse">
           <Nav className="me-auto align-lg-items-center">
             <Nav.Link href="#hero">Home</Nav.Link>
-            <Nav.Link href="#benefits">Benefits</Nav.Link>
+            <Nav.Link href="#features">Benefits</Nav.Link>
             <Nav.Link href="#process">Process</Nav.Link>
             <Link className="nav-link" to="/about">
               About

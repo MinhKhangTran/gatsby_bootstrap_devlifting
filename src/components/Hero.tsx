@@ -15,7 +15,7 @@ const Hero = () => {
             </p>
             <div className="hero_buttons d-flex gap-3 justify-content-center justify-content-lg-start mt-4 mt-lg-5">
               <Button size="lg">START NOW!</Button>
-              <Button size="lg" variant="outline-primary">
+              <Button size="lg" variant="outline-primary" href="#features">
                 LEARN MORE!
               </Button>
             </div>
