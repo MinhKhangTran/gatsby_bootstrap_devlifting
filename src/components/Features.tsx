@@ -12,25 +12,25 @@ const Features = () => {
     {
       id: 1,
       title: "Fast",
-      icon: <FaTachometerAlt size="4em" />,
+      icon: <FaTachometerAlt aria-hidden="true" size="4em" />,
       text: "Using the latest technology to generate fast static websites. Other nice features are security and scalability",
     },
     {
       id: 2,
       title: "Accessible",
-      icon: <FaUniversalAccess size="4em" />,
+      icon: <FaUniversalAccess aria-hidden="true" size="4em" />,
       text: "Websites should be accessible for everyone by default. I use the Web Content Accessibility Guideline (WCAG) to design and create my websites.",
     },
     {
       id: 3,
       title: "Search Engine Friendly",
-      icon: <FaSearchengin size="4em" />,
+      icon: <FaSearchengin aria-hidden="true" size="4em" />,
       text: "With Search Engine Optimaztion (SEO) your Business will get traffic while conversion optimized content will increase your goal achievements.",
     },
     {
       id: 4,
       title: "Customizable Content",
-      icon: <FaDatabase size="4em" />,
+      icon: <FaDatabase aria-hidden="true" size="4em" />,
       text: "With the help of Content Management Systems (CMS) you can easily maintain and update your content.",
     },
   ];
