@@ -1,5 +1,5 @@
 #hero {
-  height: 100vh;
+  height: calc(100vh - 56px);
   max-height: -webkit-fill-available;
   background: rgb(181, 134, 110);
   background: linear-gradient(0deg, #b5866e 50%, rgba(181, 134, 110, 0) 100%);
@@ -8,7 +8,7 @@
   }
   h1 {
     font-size: 3rem;
-    margin-top: 3rem;
+    padding-top: 2.5rem;
     font-weight: bold;
     color: $dark;
     line-height: 50px;
@@ -16,6 +16,9 @@
   p {
     font-size: 1.125rem;
     color: $dark;
+  }
+  img {
+    height: 200px;
   }
 }
 

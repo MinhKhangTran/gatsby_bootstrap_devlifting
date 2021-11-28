@@ -20,7 +20,7 @@ const Hero = () => {
               </Button>
             </div>
           </Col>
-          <Col lg={6} className="d-flex justify-content-center mt-5 mt-lg-0">
+          <Col lg={6} className="d-flex justify-content-center mt-4 mt-lg-0">
             <img
               height="300px"
               src={heroImg}
