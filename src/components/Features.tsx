@@ -6,10 +6,8 @@ import {
   FaSearchengin,
   FaDatabase,
 } from "react-icons/fa";
-import { useMediaQuery } from "../hooks/useMediaQuery";
 
 const Features = () => {
-  let isPageWide = useMediaQuery("(min-width: 992px)");
   const featArray = [
     {
       id: 1,
