@@ -81,7 +81,7 @@ const Process = () => {
         {processArray.map((process) => {
           const { id, title, items, img } = process;
           return (
-            <Row className="align-items-center process_row mx-xl-5">
+            <Row key={id} className="align-items-center process_row mx-xl-5">
               <Col md={6} className="">
                 <div className="process_text text-dark position-relative">
                   <span className="position-absolute">{id}</span>

@@ -1,0 +1,17 @@
+#footer {
+  p,
+  a,
+  h3 {
+    color: #2a1e20;
+    transition: 0.3s ease-in;
+  }
+  a:hover {
+    color: $primary;
+  }
+  .footer_links {
+    text-decoration: none;
+  }
+  .copyright {
+    border-top: #2a1e20 solid 1px;
+  }
+}

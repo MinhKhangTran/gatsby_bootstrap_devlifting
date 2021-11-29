@@ -50,8 +50,8 @@ const FAQ = () => {
           {faqArray.map((faq) => {
             const { id, question, answer } = faq;
             return (
-              <Accordion.Item eventKey={id + ""}>
-                <Accordion.Header>{question}</Accordion.Header>
+              <Accordion.Item key={id} eventKey={id + ""}>
+                <Accordion.Header as="h3">{question}</Accordion.Header>
                 <Accordion.Body>{answer}</Accordion.Body>
               </Accordion.Item>
             );

@@ -6,13 +6,18 @@
     font-size: 1.125rem;
     font-weight: 400;
   }
+  .accordion {
+    margin: 2rem auto 0 auto;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .accordion {
-    width: 750px;
-    margin: 2rem auto 0 auto;
+    width: auto;
   }
 }
 @media screen and (min-width: 992px) {
+  .accordion {
+    width: 750px;
+  }
 }

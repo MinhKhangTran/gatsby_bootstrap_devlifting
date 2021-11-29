@@ -12,6 +12,7 @@ const Navigation = () => {
       <Container>
         <Link
           to="/"
+          id="top"
           className="navbar-brand text-primary d-flex align-items-center"
         >
           <img src={isPageWide ? logo_big : logo} alt="logo of devlifting" />
@@ -25,6 +26,7 @@ const Navigation = () => {
             <Nav.Link href="#hero">Home</Nav.Link>
             <Nav.Link href="#features">Benefits</Nav.Link>
             <Nav.Link href="#process">Process</Nav.Link>
+            <Nav.Link href="#faq">FAQ</Nav.Link>
             <Link className="nav-link" to="/about">
               About
             </Link>
