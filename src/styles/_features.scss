@@ -27,8 +27,8 @@
     .feat_icon {
       padding: 1rem;
       border-radius: 10px;
-      width: 100px;
-      height: 100px;
+      width: 75px;
+      height: 75px;
       background: rgb(181, 134, 110);
       background: linear-gradient(
         225deg,
@@ -36,7 +36,7 @@
         rgba(146, 64, 14, 1) 100%
       );
       left: 50%;
-      top: -50px;
+      top: -37.5px;
       transform: translateX(-50%);
     }
   }
