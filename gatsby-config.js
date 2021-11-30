@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "gatsby_bootstrap_starter",
+    siteUrl: "https://devlifting.com",
+    title: "Creating websites that build your business up!",
     description:
-      "Starter for gatsby 4.0 with bootstrap, typescript and testing with cypresss",
-    keywords: "bootstrap, gatsby, typescript, cypress",
+      "DevLifting is your freelancer for creating accessible and conversion optimized websites.",
+    keywords: "bootstrap, gatsby, devlifting",
     author: "mkt",
   },
   plugins: [
