@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 
-const terms = () => {
+const TermsPage = () => {
   return (
     <Layout>
       <SEO title="Terms & Conditions" />
@@ -313,4 +313,4 @@ const terms = () => {
   );
 };
 
-export default terms;
+export default TermsPage;

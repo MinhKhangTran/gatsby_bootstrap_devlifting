@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 
-const privacy = () => {
+const PrivacyPage = () => {
   return (
     <Layout>
       <SEO title="privacy policy" />
@@ -520,4 +520,4 @@ const privacy = () => {
   );
 };
 
-export default privacy;
+export default PrivacyPage;
