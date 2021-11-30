@@ -1,6 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import CTA from "../components/CTA";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import { useMediaQuery } from "../hooks/useMediaQuery";
@@ -63,7 +64,7 @@ const AboutPage = () => {
             <Col lg={6} className="">
               <article className="text-center">
                 <StaticImage
-                  src="../images/about-min.jpg"
+                  src="../images/about.png"
                   alt="a picture about me"
                   height={350}
                   width={350}
@@ -72,6 +73,7 @@ const AboutPage = () => {
             </Col>
           </Row>
         </Container>
+        <CTA />
       </Layout>
     );
   }
@@ -83,7 +85,7 @@ const AboutPage = () => {
           <Col lg={6} className="">
             <article className="text-center">
               <StaticImage
-                src="../images/about-min.jpg"
+                src="../images/about.png"
                 alt="a picture about me"
                 height={150}
                 width={150}
@@ -145,6 +147,7 @@ const AboutPage = () => {
           </Col>
         </Row>
       </Container>
+      <CTA />
     </Layout>
   );
 };

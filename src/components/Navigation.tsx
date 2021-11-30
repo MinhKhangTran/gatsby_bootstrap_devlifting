@@ -23,16 +23,30 @@ const Navigation = () => {
         ></Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav" data-cy="nav_collapse">
           <Nav className="me-auto align-lg-items-center">
-            <Nav.Link href="/#hero">Home</Nav.Link>
-            <Nav.Link href="/#features">Benefits</Nav.Link>
-            <Nav.Link href="/#process">Process</Nav.Link>
-            <Nav.Link href="/#faq">FAQ</Nav.Link>
+            <Link to="/#hero" className="nav-link">
+              Home
+            </Link>
+            <Link to="/#features" className="nav-link">
+              Beneftis
+            </Link>
+            <Link to="/#process" className="nav-link">
+              Process
+            </Link>
+            <Link to="/#faq" className="nav-link">
+              FAQ
+            </Link>
+
             <Link className="nav-link" to="/about">
               About
             </Link>
-            <Link className="nav-link" to="/blog">
+            <a
+              className="nav-link"
+              href="https://blog.minhkhangtran.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Blog
-            </Link>
+            </a>
           </Nav>
           <Link className="btn btn-outline-primary" to="/contact">
             Contact

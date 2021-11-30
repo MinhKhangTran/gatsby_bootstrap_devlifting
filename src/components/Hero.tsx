@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import heroImg from "../images/Hero_illustration.svg";
@@ -14,7 +15,9 @@ const Hero = () => {
               accessible and conversion optimized!
             </p>
             <div className="hero_buttons d-flex gap-3 justify-content-center justify-content-lg-start mt-4 mt-lg-5">
-              <Button size="lg">START NOW!</Button>
+              <Link to="/work" className="btn btn-primary btn-lg">
+                START NOW!
+              </Link>
               <Button size="lg" variant="outline-primary" href="#features">
                 LEARN MORE!
               </Button>

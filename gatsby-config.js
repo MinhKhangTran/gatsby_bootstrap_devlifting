@@ -17,7 +17,15 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, `avif`],
+          placeholder: `tracedSVG`,
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",

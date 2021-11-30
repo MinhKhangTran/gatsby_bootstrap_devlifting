@@ -59,19 +59,19 @@ const Footer = () => {
                 <h3>Home</h3>
                 <ul className="list-unstyled">
                   <li>
-                    <a className="footer_links" href="/#features">
-                      Benefits
-                    </a>
+                    <Link to="/#features" className="footer_links">
+                      Beneftis
+                    </Link>
                   </li>
                   <li>
-                    <a className="footer_links" href="/#process">
+                    <Link to="/#process" className="footer_links">
                       Process
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="footer_links" href="/#faq">
+                    <Link to="/#faq" className="footer_links">
                       FAQ
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </Col>
@@ -84,9 +84,14 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="footer_links" to="/blog">
+                    <a
+                      className="footer_links"
+                      href="https://blog.minhkhangtran.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Blog
-                    </Link>
+                    </a>
                   </li>
                   <li>
                     <Link className="footer_links" to="/contact">
