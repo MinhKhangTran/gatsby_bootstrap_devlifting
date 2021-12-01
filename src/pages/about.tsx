@@ -8,6 +8,7 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 
 const AboutPage = () => {
   let isPageWide = useMediaQuery("(min-width: 992px)");
+  const emailAddress = "devlifting@gmail.com";
   if (isPageWide) {
     return (
       <Layout>
@@ -54,7 +55,7 @@ const AboutPage = () => {
                 <h2 className="text-uppercase text-primary fw-bold mt-3">
                   Contact
                 </h2>
-                <p className="lead text-dark">email</p>
+                <p className="lead text-dark">{emailAddress}</p>
                 <h2 className="text-uppercase text-primary fw-bold mt-3">
                   Follow me
                 </h2>
@@ -136,7 +137,7 @@ const AboutPage = () => {
                   <h2 className="text-uppercase text-primary fw-bold mt-3">
                     Contact
                   </h2>
-                  <p className="lead text-dark">email</p>
+                  <p className="lead text-dark">{emailAddress}</p>
                   <h2 className="text-uppercase text-primary fw-bold mt-3">
                     Follow me
                   </h2>
