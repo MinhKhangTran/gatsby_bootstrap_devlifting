@@ -1,3 +1,9 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
+const siteUrl = process.env.SITE_URL || `http://localhost:8000/`;
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://devlifting.com",
@@ -27,6 +33,14 @@ module.exports = {
       },
     },
     "gatsby-transformer-sharp",
+
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -34,6 +48,33 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: [`en`, `de`],
+        defaultLanguage: `en`,
+        siteUrl,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false,
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+        pages: [
+          {
+            matchPath: "/:lang?/blog/:uid",
+            getLanguageFromPath: true,
+            excludeLanguages: ["es"],
+          },
+          {
+            matchPath: "/preview",
+            languages: ["en"],
+          },
+        ],
+      },
     },
   ],
 };

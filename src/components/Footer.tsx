@@ -1,10 +1,15 @@
 import { Link } from "gatsby";
+import { useI18next, Link as IntLink } from "gatsby-plugin-react-i18next";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Trans } from "react-i18next";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import logo_big from "../images/logo_big.svg";
 
-const Footer = () => {
+const Footer = ({ path }: { path: string }) => {
+  const { languages, originalPath } = useI18next();
+  console.log(path);
+
   return (
     <footer role="contentinfo" id="footer" className="bg-secondary py-4">
       {/* <p className="back-to-top text-center mb-0">
@@ -29,6 +34,7 @@ const Footer = () => {
             <p className=" my-2">
               We do all the heavy lifting to build your web presence up!
             </p>
+
             <div className="footer_socials d-flex gap-3 text-dark">
               <div className="footer_icon">
                 <a
@@ -117,6 +123,19 @@ const Footer = () => {
               </Col>
               <Col md={3} xs={6}>
                 <h3>Language</h3>
+                <ul className="list-unstyled">
+                  {languages.map((language) => (
+                    <li key={language}>
+                      <IntLink
+                        className="footer_links"
+                        to={originalPath}
+                        language={language}
+                      >
+                        {language === "en" ? "Englisch" : "German"}
+                      </IntLink>
+                    </li>
+                  ))}
+                </ul>
               </Col>
             </Row>
           </Col>
