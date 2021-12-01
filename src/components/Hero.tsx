@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import heroImg from "../images/Hero_illustration.svg";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Hero = () => {
   return (
@@ -9,17 +10,18 @@ const Hero = () => {
       <Container className="">
         <Row className="hero_row">
           <Col lg={6}>
-            <h1>We do all the heavy lifting to build your web presence up</h1>
+            <h1><Trans>We do all the heavy lifting to build your web presence up</Trans></h1>
             <p className="lead">
+            <Trans>
               Our focus is growing your business by making your websites
-              accessible and conversion optimized!
+              accessible and conversion optimized!</Trans>
             </p>
             <div className="hero_buttons d-flex gap-3 justify-content-center justify-content-lg-start mt-4 mt-lg-5">
               <Link to="/work" className="btn btn-primary btn-lg">
-                START NOW!
+              <Trans>START NOW!</Trans>
               </Link>
               <Button size="lg" variant="outline-primary" href="#features">
-                LEARN MORE!
+              <Trans>LEARN MORE!</Trans>
               </Button>
             </div>
           </Col>

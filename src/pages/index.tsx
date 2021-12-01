@@ -22,15 +22,7 @@ const IndexPage = ({ location }: { location: any }) => {
       <FAQ />
       <CTA />
 
-      <h1>
-        <Trans>Welcome to my Gatsby site!</Trans>
-      </h1>
-      <p>
-        <Trans>My name is MKT</Trans>
-      </p>
-      <p>
-        <Trans>My profession is Calculation engineer</Trans>
-      </p>
+     
     </Layout>
   );
 };
