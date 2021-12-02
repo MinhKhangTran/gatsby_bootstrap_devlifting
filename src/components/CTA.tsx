@@ -12,7 +12,7 @@ const CTA = () => {
               ready to dive in?
             </h2>
             <h3 className="text-secondary text-uppercase fw-bold">
-              Start your journed now!
+              Start your journey now!
             </h3>
           </Col>
           <Col lg={4}>
