@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Trans } from "react-i18next";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import logo from "../images/logo.svg";
 import logo_big from "../images/logo_big.svg";
@@ -24,20 +25,20 @@ const Navigation = () => {
         <Navbar.Collapse id="basic-navbar-nav" data-cy="nav_collapse">
           <Nav className="me-auto align-lg-items-center">
             <Link to="/#hero" className="nav-link">
-              Home
+              <Trans>Home</Trans>
             </Link>
             <Link to="/#features" className="nav-link">
-              Beneftis
+              <Trans>Benefits</Trans>
             </Link>
             <Link to="/#process" className="nav-link">
-              Process
+              <Trans>Process</Trans>
             </Link>
             <Link to="/#faq" className="nav-link">
-              FAQ
+              <Trans>FAQ</Trans>
             </Link>
 
             <Link className="nav-link" to="/about">
-              About
+              <Trans>About</Trans>
             </Link>
             <a
               className="nav-link"
@@ -45,11 +46,11 @@ const Navigation = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Blog
+              <Trans>Blog</Trans>
             </a>
           </Nav>
           <Link className="btn btn-outline-primary" to="/contact">
-            Contact
+            <Trans>Contact</Trans>
           </Link>
         </Navbar.Collapse>
       </Container>

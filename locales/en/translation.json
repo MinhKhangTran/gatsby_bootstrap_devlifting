@@ -1,20 +1,40 @@
 {
   "Our heavy lifting will improve your web presence!": "Our heavy lifting will improve your web presence!",
-  "Our focus is growing your business by making your website accessible and conversion optimized!": "Our focus is growing your business by making your website accessible and conversion optimized!",
+  "The focus is growing your business by making your website accessible and conversion optimized!": "The focus is growing your business by making your website accessible and conversion optimized!",
   "START NOW!": "START NOW!",
   "LEARN MORE!": "LEARN MORE!",
+
   "Benefits": "Benefits",
   "Process": "Process",
   "About": "About",
   "Contact": "Contact",
-  "Build you up": "Build you up",
-  "These are our key benefits help you build your business up": "These are our key benefits help you build your business up",
+
+  "Full-Service Package": "Full-Service Package",
+  "These are our key benefits help you build your business up.": "These are our key benefits help you build your business up.",
   "Fast": "Fast",
-  "Using the latest technology to generate fast static websites. Your websites will be fast, safe and scalable.": "Using the latest technology to generate fast static websites. Your websites will be fast, safe and scalable.",
+  "Using the latest technology to generate fast static websites. Your website will be fast, safe and scalable.": "Using the latest technology to generate fast static website. Your websites will be fast, safe and scalable.",
   "Accessible": "Accessible",
-  "Websites should be accessible for everyone by default. So your website can be used by everyone independent from their disabilities.": "Websites should be accessible for everyone by default. So your website can be used by everyone independent from their disabilities.",
+  "Websites should be accessible for everyone by default. So your website can be used and seen by everyone.": "Websites should be accessible for everyone by default. So your website can be used and seen by everyone.",
   "Search Engine Friendly": "Search Engine Friendly",
   "With Search Engine Optimaztion (SEO) your business will get traffic and a higher position on Google. With conversion optimized content your website will sell.": "With Search Engine Optimaztion (SEO) your business will get traffic and a higher position on Google. With conversion optimized content your website will sell.",
   "Customizable Content": "Customizable Content",
-  "With the help of chosen Content Management Systems (CMS) you can easily maintain and update your content flexible.": "With the help of chosen Content Management Systems (CMS) you can easily maintain and update your content flexible."
+  "With the help of chosen Content Management Systems (CMS) you can easily maintain and update your content flexible.": "With the help of chosen Content Management Systems (CMS) you can easily maintain and update your content flexible.",
+
+  "THE HEAVY LIFTING": "THE HEAVY LIFTING",
+  "The process from building and hosting a website from scratch is difficult and time comsuming. That’s where we come in.": "The process from building and hosting a website from scratch is difficult and time comsuming. That’s where we come in.",
+
+  "Designing": "Designing",
+  "Planing & implementing your goals for the website": "Planing & implementing your goals for the website",
+  "Building Wireframing for desktop and handheld devices": "Building Wireframing for desktop and handheld devices",
+  "From the beginning the focus is on UX/UI, Conversion and Accessibility.": "From the beginning the focus is on UX/UI, Conversion and Accessibility.",
+
+  "Developing": "Developing",
+  "Converting design mockups with HTML/CSS and Javascript": "Converting design mockups with HTML/CSS and Javascript",
+  "Developing static sites with the latest technologies": "Developing static sites with the latest technologies",
+  "Usage of known CMS (WordPress, Contentful, GraphCMS)": "Usage of known CMS (WordPress, Contentful, GraphCMS)",
+
+  "HOSTING & OPTIMASATION": "HOSTING & OPTIMASATION",
+  "Testing accessibility and reviewing the design": "Testing accessibility and reviewing the design",
+  "Launching and promoting your website": "Launching and promoting your website",
+  "Increasing the traffic on your webpage and optimize your conversions": "Increasing the traffic on your webpage and optimize your conversions"
 }

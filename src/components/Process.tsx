@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Trans } from "react-i18next";
 import { FaCheck } from "react-icons/fa";
 import process_1 from "../images/process_1.svg";
 import process_2 from "../images/process_2.svg";
@@ -56,7 +57,7 @@ const Process = () => {
         { id: 2, text: "Launching and promoting your website" },
         {
           id: 3,
-          text: "Increasing the traffic on your landing page and optimize your conversions",
+          text: "Increasing the traffic on your webpage and optimize your conversions",
         },
       ],
       img: (
@@ -72,11 +73,13 @@ const Process = () => {
     <section id="process" aria-label="process" className="section">
       <Container>
         <h2 className="text-primary fw-bold text-uppercase">
-          THE HEAVY LIFTING
+          <Trans>THE HEAVY LIFTING</Trans>
         </h2>
         <p className="text-dark">
-          The process from building and hosting a landing page from scratch is
-          difficult and time comsuming. That’s where we come in.
+          <Trans>
+            The process from building and hosting a website from scratch is
+            difficult and time comsuming. That’s where we come in.
+          </Trans>
         </p>
         {processArray.map((process) => {
           const { id, title, items, img } = process;
@@ -86,14 +89,16 @@ const Process = () => {
                 <div className="process_text text-dark position-relative">
                   <span className="position-absolute">{id}</span>
                   <h3 className="text-primary text-uppercase fw-bold mb-2">
-                    {title}
+                    <Trans>{title}</Trans>
                   </h3>
                   {items.map((item) => {
                     const { id, text } = item;
                     return (
                       <ul className="list-unstyled" key={id}>
                         <li className="d-flex align-items-center gap-2">
-                          <FaCheck className="text-secondary" /> {text}
+                          <Trans>
+                            <FaCheck className="text-secondary" /> {text}
+                          </Trans>
                         </li>
                       </ul>
                     );

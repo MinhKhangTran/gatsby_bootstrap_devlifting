@@ -15,7 +15,7 @@ const Hero = () => {
             </h1>
             <p className="lead">
               <Trans>
-                Our focus is growing your business by making your website
+                The focus is growing your business by making your website
                 accessible and conversion optimized!
               </Trans>
             </p>
