@@ -1,14 +1,14 @@
 import { Link } from "gatsby";
 import { useI18next, Link as IntLink } from "gatsby-plugin-react-i18next";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Dropdown, Row } from "react-bootstrap";
 import { Trans } from "react-i18next";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import logo_big from "../images/logo_big.svg";
 
-const Footer = ({ path }: { path: string }) => {
-  const { languages, originalPath } = useI18next();
-  console.log(path);
+const Footer = () => {
+  const { languages, originalPath, language } = useI18next();
+  console.log(language);
 
   return (
     <footer role="contentinfo" id="footer" className="bg-secondary py-4">
@@ -122,20 +122,28 @@ const Footer = ({ path }: { path: string }) => {
                 </ul>
               </Col>
               <Col md={3} xs={6}>
-                <h3>Language</h3>
-                <ul className="list-unstyled">
-                  {languages.map((language) => (
-                    <li key={language}>
-                      <IntLink
-                        className="footer_links"
-                        to={originalPath}
-                        language={language}
+                <Dropdown>
+                  <Dropdown.Toggle variant="dark" id="dropdown-language">
+                    {language === "en" ? "🇺🇸 Englisch" : "🇩🇪 German"}
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    {languages.map((language) => (
+                      <Dropdown.Item
+                        as="p"
+                        className="pb-2 mb-0"
+                        key={language}
                       >
-                        {language === "en" ? "Englisch" : "German"}
-                      </IntLink>
-                    </li>
-                  ))}
-                </ul>
+                        <IntLink
+                          className="footer_links"
+                          to={originalPath}
+                          language={language}
+                        >
+                          {language === "en" ? "🇺🇸 Englisch" : "🇩🇪 German"}
+                        </IntLink>
+                      </Dropdown.Item>
+                    ))}
+                  </Dropdown.Menu>
+                </Dropdown>
               </Col>
             </Row>
           </Col>

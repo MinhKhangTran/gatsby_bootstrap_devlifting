@@ -5,13 +5,7 @@ import Navigation from "./Navigation";
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import "@reach/skip-nav/styles.css";
 
-const Layout = ({
-  children,
-  path,
-}: {
-  children: React.ReactNode;
-  path: string;
-}) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
       <header role="banner">
@@ -20,7 +14,7 @@ const Layout = ({
         <SkipNavContent />
       </header>
       <main role="main">{children}</main>
-      <Footer path={path} />
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,8 @@
+import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Trans } from "react-i18next";
 import CTA from "../components/CTA";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
@@ -9,6 +11,8 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 const AboutPage = () => {
   let isPageWide = useMediaQuery("(min-width: 992px)");
   const emailAddress = "devlifting@gmail.com";
+  const about_text =
+    "The master mind behind DevLifting is Minh Khang Tran. He is a freelancer from Germany. He specialized himself in creating static websites like business & marketing pages, landing pages, blogs or portfolios. He works with both locale and international customers to fulfill their needs.";
   if (isPageWide) {
     return (
       <Layout>
@@ -17,14 +21,10 @@ const AboutPage = () => {
           <Row className="">
             <Col lg={6}>
               <h1 className="text-uppercase text-primary fw-bold mt-3">
-                ABOUT DEVLIFTING
+                <Trans>ABOUT DEVLIFTING</Trans>
               </h1>
               <p className="lead text-dark">
-                The master mind behind DevLifting is Minh Khang Tran. He is a
-                freelancer from Germany. He specialized himself in creating
-                static websites like Landing Pages, blogs or portfolios. He
-                works with both locale and international customers to fulfill
-                their needs.
+                <Trans>{about_text}</Trans>
               </p>
               <h2 className="text-uppercase text-primary fw-bold mt-3">
                 The goals
@@ -97,14 +97,10 @@ const AboutPage = () => {
             <Row>
               <Col md={9}>
                 <h1 className="text-uppercase text-primary fw-bold mt-3">
-                  ABOUT DEVLIFTING
+                  <Trans>ABOUT DEVLIFTING</Trans>
                 </h1>
                 <p className="lead text-dark">
-                  The master mind behind DevLifting is Minh Khang Tran. He is a
-                  freelancer from Germany. He specialized himself in creating
-                  static websites like Landing Pages, blogs or portfolios. He
-                  works with both locale and international customers to fulfill
-                  their needs.
+                  <Trans>{about_text}</Trans>
                 </p>
                 <h2 className="text-uppercase text-primary fw-bold mt-3">
                   The goals
@@ -154,3 +150,17 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

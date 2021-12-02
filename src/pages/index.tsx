@@ -8,21 +8,17 @@ import Process from "../components/Process";
 import SEO from "../components/Seo";
 
 import { graphql } from "gatsby";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 // markup
-const IndexPage = ({ location }: { location: any }) => {
-  const { t } = useTranslation();
+const IndexPage = () => {
   return (
-    <Layout path={location.pathname}>
+    <Layout>
       <SEO title="DevLifting" />
       <Hero />
       <Features />
       <Process />
       <FAQ />
       <CTA />
-
-     
     </Layout>
   );
 };

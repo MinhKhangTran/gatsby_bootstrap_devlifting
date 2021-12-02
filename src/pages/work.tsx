@@ -13,7 +13,7 @@ import {
 } from "react-bootstrap";
 
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 interface IFormInputs {
   firstName: string;
@@ -385,3 +385,17 @@ const WorkPage = () => {
 };
 
 export default WorkPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
