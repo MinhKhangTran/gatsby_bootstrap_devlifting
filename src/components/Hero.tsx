@@ -10,18 +10,21 @@ const Hero = () => {
       <Container className="">
         <Row className="hero_row">
           <Col lg={6}>
-            <h1><Trans>We do all the heavy lifting to build your web presence up</Trans></h1>
+            <h1>
+              <Trans>Our heavy lifting will improve your web presence!</Trans>
+            </h1>
             <p className="lead">
-            <Trans>
-              Our focus is growing your business by making your websites accessible and conversion optimized!
+              <Trans>
+                Our focus is growing your business by making your website
+                accessible and conversion optimized!
               </Trans>
             </p>
             <div className="hero_buttons d-flex gap-3 justify-content-center justify-content-lg-start mt-4 mt-lg-5">
               <Link to="/work" className="btn btn-primary btn-lg">
-              <Trans>START NOW!</Trans>
+                <Trans>START NOW!</Trans>
               </Link>
               <Button size="lg" variant="outline-primary" href="#features">
-              <Trans>LEARN MORE!</Trans>
+                <Trans>LEARN MORE!</Trans>
               </Button>
             </div>
           </Col>

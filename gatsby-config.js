@@ -7,7 +7,7 @@ const siteUrl = process.env.SITE_URL || `http://localhost:8000/`;
 module.exports = {
   siteMetadata: {
     siteUrl: "https://devlifting.com",
-    title: "Creating websites that build your business up!",
+    title: "Our heavy lifting will improve your web presence!",
     description:
       "DevLifting is your freelancer for creating accessible and conversion optimized websites.",
     keywords: "bootstrap, gatsby, devlifting",
@@ -17,6 +17,7 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-manifest",
       options: {

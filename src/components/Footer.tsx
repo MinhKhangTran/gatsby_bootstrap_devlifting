@@ -32,7 +32,7 @@ const Footer = ({ path }: { path: string }) => {
               <img src={logo_big} alt="logo of devlifting" height="60" />
             </Link>
             <p className=" my-2">
-              We do all the heavy lifting to build your web presence up!
+              <Trans>Our heavy lifting will improve your web presence!</Trans>
             </p>
 
             <div className="footer_socials d-flex gap-3 text-dark">
