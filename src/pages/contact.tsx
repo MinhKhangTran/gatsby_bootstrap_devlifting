@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import { useMediaQuery } from "../hooks/useMediaQuery";
+import axios from "axios";
 import {
   Col,
   Container,
@@ -10,6 +11,7 @@ import {
   Form,
   Row,
   Button,
+  Alert,
 } from "react-bootstrap";
 
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -34,27 +36,23 @@ const ContactPage = () => {
     formState: { errors },
   } = useForm<IFormInputs>();
 
-  const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
-    console.log(data);
-    const response = await fetch(`/api/form`, {
-      method: `POST`,
-      body: JSON.stringify(data),
-      headers: {
-        "content-type": `application/json`,
-      },
-    });
+  const onSubmit: SubmitHandler<IFormInputs> = (data) => {
+    axios({
+      method: "post",
+      url: `https://getform.io/f/${process.env.GATSBY_GETFORM}`,
+      data,
+    })
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
 
-    const daten = await response.json();
-
-    console.log(`Response from api:`, daten);
-    setMessage(daten);
+    setMessage("Thank you 🥰");
     reset();
   };
   if (isPageWide) {
     return (
       <Layout>
         <SEO title="Contact" />
-        <Container id="contact" className="my-4">
+        <Container id="contact" className="my-5">
           <Row className="align-items-center">
             <Col lg={6} className="">
               <h1 className="text-uppercase text-primary fw-bold mt-3">
@@ -165,6 +163,9 @@ const ContactPage = () => {
                     </Col>
                   </Row>
                 </Form>
+                {message.length > 0 && (
+                  <Alert variant="success">{message}</Alert>
+                )}
                 <p className="fst-italic">
                   Already interested?{" "}
                   <Link to="/work">Click here to get started!</Link>

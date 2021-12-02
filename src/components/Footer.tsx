@@ -8,7 +8,6 @@ import logo_big from "../images/logo_big.svg";
 
 const Footer = () => {
   const { languages, originalPath, language } = useI18next();
-  console.log(language);
 
   return (
     <footer role="contentinfo" id="footer" className="bg-secondary py-4">
