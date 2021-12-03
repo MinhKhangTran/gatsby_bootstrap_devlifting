@@ -36,6 +36,7 @@ function SEO({
   const { originalPath, language } = useI18next();
 
   const metaDescription = description || site?.siteMetadata?.description;
+  const titleTemp = t("site?.siteMetadata?.title")
   const canonical = pathname
     ? `${site?.siteMetadata?.siteUrl}${pathname}`
     : null;
@@ -45,7 +46,7 @@ function SEO({
         lang:language,
       }}
       title={title}
-      titleTemplate={`%s | ${t('site?.siteMetadata?.title')}`}
+      titleTemplate={`%s | titleTemp`}
       link={
         canonical
           ? [
