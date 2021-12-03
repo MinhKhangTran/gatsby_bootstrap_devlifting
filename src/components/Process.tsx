@@ -96,8 +96,8 @@ const Process = () => {
                     return (
                       <ul className="list-unstyled" key={id}>
                         <li className="d-flex align-items-center gap-2">
-                          <Trans>
-                            <FaCheck className="text-secondary" /> {text}
+                          
+                            <FaCheck className="text-secondary" /> <Trans>{text}
                           </Trans>
                         </li>
                       </ul>
