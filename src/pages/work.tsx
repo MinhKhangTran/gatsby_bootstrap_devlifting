@@ -71,10 +71,10 @@ const WorkPage = () => {
               <h1 className="text-uppercase text-primary fw-bold mt-3">
                 Let's work together
               </h1>
-              <p className="lead text-dark">
+              <h2 className="lead text-dark">
                 We would love to hear from you. Just fill this form and We will
                 connect to you as soon as possible
-              </p>
+              </h2>
               <Row>
                 <Form noValidate onSubmit={handleSubmit(onSubmit)}>
                   <Row className="contact_form">
@@ -144,7 +144,7 @@ const WorkPage = () => {
                     </Col>
                     <Col lg={12} className="mx-auto">
                       <FloatingLabel
-                        controlId="floatingTextarea"
+                        controlId="floatingCompany"
                         label="Company"
                         className="mb-4"
                       >
@@ -164,7 +164,7 @@ const WorkPage = () => {
                     </Col>
                     <Col lg={12} className="mx-auto">
                       <FloatingLabel
-                        controlId="floatingTextarea"
+                        controlId="floatingBudget"
                         label="Expected Budget"
                         className="mb-4"
                       >
@@ -251,10 +251,10 @@ const WorkPage = () => {
         <h1 className="text-uppercase text-primary fw-bold mt-3">
           Let's work together
         </h1>
-        <p className="lead text-dark">
+        <h2 className="lead text-dark">
           We would love to hear from you. Just fill this form and We will
           connect to you as soon as possible
-        </p>
+        </h2>
         <Row>
           <Form noValidate onSubmit={handleSubmit(onSubmit)}>
             <Row className="contact_form">
@@ -324,7 +324,7 @@ const WorkPage = () => {
               </Col>
               <Col lg={12} className="mx-auto">
                 <FloatingLabel
-                  controlId="floatingTextarea"
+                  controlId="floatingCompany"
                   label="Company"
                   className="mb-4"
                 >
@@ -344,7 +344,7 @@ const WorkPage = () => {
               </Col>
               <Col lg={12} className="mx-auto">
                 <FloatingLabel
-                  controlId="floatingTextarea"
+                  controlId="floatingBudget"
                   label="Expected Budget"
                   className="mb-4"
                 >

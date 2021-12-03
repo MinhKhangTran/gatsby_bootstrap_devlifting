@@ -72,10 +72,10 @@ const ContactPage = () => {
               <h1 className="text-uppercase text-primary fw-bold mt-3">
                 Get in Touch!
               </h1>
-              <p className="lead text-dark">
+              <h2 className="lead text-dark">
                 Fell free to contact us and we will get back to you as soon as
                 possible!
-              </p>
+              </h2>
 
               <Row>
                 <Form noValidate onSubmit={handleSubmit(onSubmit)}>
@@ -214,10 +214,10 @@ const ContactPage = () => {
         <h1 className="text-uppercase text-primary fw-bold mt-3">
           Get in touch!
         </h1>
-        <p className="lead text-dark">
+        <h2 className="lead text-dark">
           Fell free to contact us and we will get back to you as soon as
           possible!
-        </p>
+        </h2>
         <Row>
           <Form noValidate onSubmit={handleSubmit(onSubmit)}>
             <Row className="contact_form">
