@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import { SeoQuery } from "../types.generated";
-import { useI18next } from "gatsby-plugin-react-i18next";
+import { useI18next,useTranslation } from "gatsby-plugin-react-i18next";
 
 function SEO({
   description,
