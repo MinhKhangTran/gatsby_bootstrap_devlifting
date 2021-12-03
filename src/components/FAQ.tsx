@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import { Accordion, Container } from "react-bootstrap";
+import { Trans } from "react-i18next";
 
 const FAQ = () => {
   const faqArray = [
@@ -40,19 +41,24 @@ const FAQ = () => {
     <section id="faq" aria-label="faq" className="section">
       <Container>
         <h2 className="text-center text-primary fw-bold text-uppercase">
-          FREQUENTLY ASKED QUESTIONS
+        <Trans>FREQUENTLY ASKED QUESTIONS</Trans>
         </h2>
         <p className="text-center text-dark mb-4">
-          Feel free to <Link to="/contact">contact me</Link> if you can't find
-          the answers you are looking for
+        <Trans>Feel free to <Link to="/contact"><Trans>contact me</Trans></Link> if you can't find
+          the answers you are looking for.</Trans>
         </p>
         <Accordion defaultActiveKey="1" flush>
           {faqArray.map((faq) => {
             const { id, question, answer } = faq;
             return (
               <Accordion.Item key={id} eventKey={id + ""}>
-                <Accordion.Header as="h3">{question}</Accordion.Header>
-                <Accordion.Body>{answer}</Accordion.Body>
+                <Accordion.Header as="h3">
+                <Trans>
+                  {question}</Trans>
+                  </Accordion.Header>
+                <Accordion.Body><Trans>{answer}</Trans>
+                
+                </Accordion.Body>
               </Accordion.Item>
             );
           })}
