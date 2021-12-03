@@ -205,7 +205,11 @@ const WorkPage = () => {
                     </Col>
 
                     <Col lg={12} className="mx-auto">
-                      <ToastContainer className="p-3" position="bottom-center">
+                      <ToastContainer
+                        data-cy="toast_lg"
+                        className="p-3"
+                        position="bottom-center"
+                      >
                         <Toast bg="success" className="text-white" show={alert}>
                           <Toast.Body>Thank you for your message 🥰</Toast.Body>
                         </Toast>
@@ -385,7 +389,11 @@ const WorkPage = () => {
               </Col>
 
               <Col lg={12} className="mx-auto">
-                <ToastContainer className="p-3" position="bottom-center">
+                <ToastContainer
+                  data-cy="toast_sm"
+                  className="p-3"
+                  position="bottom-center"
+                >
                   <Toast bg="success" className="text-white" show={alert}>
                     <Toast.Body>Thank you for your message 🥰</Toast.Body>
                   </Toast>
