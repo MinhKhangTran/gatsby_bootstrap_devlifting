@@ -41,11 +41,11 @@ const FAQ = () => {
     <section id="faq" aria-label="faq" className="section">
       <Container>
         <h2 className="text-center text-primary fw-bold text-uppercase">
-        <Trans>FREQUENTLY ASKED QUESTIONS</Trans>
+          <Trans>FREQUENTLY ASKED QUESTIONS</Trans>
         </h2>
         <p className="text-center text-dark mb-4">
-        <Trans>Feel free to <Link to="/contact"><Trans>contact me</Trans></Link> if you can't find
-          the answers you are looking for.</Trans>
+          <Trans i18nKey="faq_subtitle">Feel free to <Link to="/contact">contact me</Link> if you can't find
+            the answers you are looking for.</Trans>
         </p>
         <Accordion defaultActiveKey="1" flush>
           {faqArray.map((faq) => {
@@ -53,11 +53,11 @@ const FAQ = () => {
             return (
               <Accordion.Item key={id} eventKey={id + ""}>
                 <Accordion.Header as="h3">
-                <Trans>
-                  {question}</Trans>
-                  </Accordion.Header>
+                  <Trans>
+                    {question}</Trans>
+                </Accordion.Header>
                 <Accordion.Body><Trans>{answer}</Trans>
-                
+
                 </Accordion.Body>
               </Accordion.Item>
             );
