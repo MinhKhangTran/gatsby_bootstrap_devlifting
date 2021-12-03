@@ -1,5 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import { useMediaQuery } from "../hooks/useMediaQuery";
@@ -10,10 +10,13 @@ import {
   Form,
   Row,
   Button,
+  Toast,
+  ToastContainer,
 } from "react-bootstrap";
 
 import { SubmitHandler, useForm } from "react-hook-form";
 import { graphql, Link } from "gatsby";
+import axios from "axios";
 
 interface IFormInputs {
   firstName: string;
@@ -26,7 +29,8 @@ interface IFormInputs {
 
 const WorkPage = () => {
   let isPageWide = useMediaQuery("(min-width: 992px)");
-  const [message, setMessage] = useState("");
+  const [alert, setAlert] = useState(false);
+  const [loading, setLoading] = useState(false);
   // useForm
   const {
     register,
@@ -35,22 +39,28 @@ const WorkPage = () => {
     formState: { errors },
   } = useForm<IFormInputs>();
 
-  const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
-    console.log(data);
-    const response = await fetch(`/api/form`, {
-      method: `POST`,
-      body: JSON.stringify(data),
-      headers: {
-        "content-type": `application/json`,
-      },
-    });
-
-    const daten = await response.json();
-
-    console.log(`Response from api:`, daten);
-    setMessage(daten);
+  const onSubmit: SubmitHandler<IFormInputs> = (data) => {
+    setLoading(true);
+    axios({
+      method: "post",
+      url: `https://getform.io/f/${process.env.GATSBY_GETFORM}`,
+      data,
+    })
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
+    setLoading(false);
+    setAlert(true);
     reset();
   };
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setAlert(false);
+    }, 3000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [alert]);
   if (isPageWide) {
     return (
       <Layout>
@@ -195,16 +205,23 @@ const WorkPage = () => {
                     </Col>
 
                     <Col lg={12} className="mx-auto">
+                      <ToastContainer className="p-3" position="bottom-center">
+                        <Toast bg="success" className="text-white" show={alert}>
+                          <Toast.Body>Thank you for your message 🥰</Toast.Body>
+                        </Toast>
+                      </ToastContainer>
                       <Button
+                        disabled={loading}
                         type="submit"
                         variant="primary"
                         className="mt-3 mb-4"
                       >
-                        Submit
+                        {loading ? "Sending..." : "Submit"}
                       </Button>
                     </Col>
                   </Row>
                 </Form>
+
                 <p className="fst-italic">
                   Just want to say “Hello”?{" "}
                   <Link to="/contact">Click here to contact us</Link>
@@ -368,12 +385,23 @@ const WorkPage = () => {
               </Col>
 
               <Col lg={12} className="mx-auto">
-                <Button type="submit" variant="primary" className="mt-3 mb-4">
-                  Submit
+                <ToastContainer className="p-3" position="bottom-center">
+                  <Toast bg="success" className="text-white" show={alert}>
+                    <Toast.Body>Thank you for your message 🥰</Toast.Body>
+                  </Toast>
+                </ToastContainer>
+                <Button
+                  disabled={loading}
+                  type="submit"
+                  variant="primary"
+                  className="mt-3 mb-4"
+                >
+                  {loading ? "Sending..." : "Submit"}
                 </Button>
               </Col>
             </Row>
           </Form>
+
           <p className="fst-italic">
             Just want to say “Hello”?{" "}
             <Link to="/contact">Click here to contact us</Link>

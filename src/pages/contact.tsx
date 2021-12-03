@@ -1,5 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import { useMediaQuery } from "../hooks/useMediaQuery";
@@ -11,7 +11,8 @@ import {
   Form,
   Row,
   Button,
-  Alert,
+  Toast,
+  ToastContainer,
 } from "react-bootstrap";
 
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -27,7 +28,9 @@ interface IFormInputs {
 
 const ContactPage = () => {
   let isPageWide = useMediaQuery("(min-width: 992px)");
-  const [message, setMessage] = useState("");
+
+  const [alert, setAlert] = useState(false);
+  const [loading, setLoading] = useState(false);
   // useForm
   const {
     register,
@@ -37,6 +40,7 @@ const ContactPage = () => {
   } = useForm<IFormInputs>();
 
   const onSubmit: SubmitHandler<IFormInputs> = (data) => {
+    setLoading(true);
     axios({
       method: "post",
       url: `https://getform.io/f/${process.env.GATSBY_GETFORM}`,
@@ -44,10 +48,20 @@ const ContactPage = () => {
     })
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
-
-    setMessage("Thank you 🥰");
+    setLoading(false);
+    setAlert(true);
     reset();
   };
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setAlert(false);
+    }, 3000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [alert]);
+
   if (isPageWide) {
     return (
       <Layout>
@@ -62,6 +76,7 @@ const ContactPage = () => {
                 Fell free to contact us and we will get back to you as soon as
                 possible!
               </p>
+
               <Row>
                 <Form noValidate onSubmit={handleSubmit(onSubmit)}>
                   <Row className="contact_form">
@@ -153,19 +168,23 @@ const ContactPage = () => {
                     </Col>
 
                     <Col lg={12} className="mx-auto">
+                      <ToastContainer className="p-3" position="bottom-center">
+                        <Toast bg="success" className="text-white" show={alert}>
+                          <Toast.Body>Thank you for your message 🥰</Toast.Body>
+                        </Toast>
+                      </ToastContainer>
                       <Button
+                        disabled={loading}
                         type="submit"
                         variant="primary"
                         className="mt-3 mb-4"
                       >
-                        Submit
+                        {loading ? "Sending..." : "Submit"}
                       </Button>
                     </Col>
                   </Row>
                 </Form>
-                {message.length > 0 && (
-                  <Alert variant="success">{message}</Alert>
-                )}
+
                 <p className="fst-italic">
                   Already interested?{" "}
                   <Link to="/work">Click here to get started!</Link>
@@ -290,15 +309,26 @@ const ContactPage = () => {
               </Col>
 
               <Col lg={12} className="mx-auto">
-                <Button type="submit" variant="primary" className="mt-3 mb-4">
-                  Submit
+                <ToastContainer className="p-3" position="bottom-center">
+                  <Toast bg="success" className="text-white" show={alert}>
+                    <Toast.Body>Thank you for your message 🥰</Toast.Body>
+                  </Toast>
+                </ToastContainer>
+                <Button
+                  disabled={loading}
+                  type="submit"
+                  variant="primary"
+                  className="mt-3 mb-4"
+                >
+                  {loading ? "Sending..." : "Submit"}
                 </Button>
               </Col>
             </Row>
           </Form>
+
           <p className="fst-italic">
             Already interested?{" "}
-            <Link to="/contact">Click here to get started!</Link>
+            <Link to="/work">Click here to get started!</Link>
           </p>
         </Row>
       </Container>
