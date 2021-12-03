@@ -17,7 +17,43 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: '/sitemap',
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage(
+            filter: {
+              path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
+            }
+          ) {
+            nodes {
+              path
+            }
+          }
+        }
+        `,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map((page) => {
+            return { ...page };
+          });
+        },
+        serialize: ({ path }) => {
+          return {
+            url: path,
+            changefreq: 'weekly',
+            priority: 0.7,
+          };
+        },
+      },
+    },
+
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
