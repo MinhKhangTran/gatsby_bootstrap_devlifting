@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import { SeoQuery } from "../types.generated";
+import { useI18next } from "gatsby-plugin-react-i18next";
 
 function SEO({
   description,
@@ -31,6 +32,8 @@ function SEO({
       }
     `
   );
+  const { t } = useTranslation();
+  const { originalPath, language } = useI18next();
 
   const metaDescription = description || site?.siteMetadata?.description;
   const canonical = pathname
@@ -39,7 +42,7 @@ function SEO({
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang:language,
       }}
       title={title}
       titleTemplate={`%s | ${site?.siteMetadata?.title}`}
