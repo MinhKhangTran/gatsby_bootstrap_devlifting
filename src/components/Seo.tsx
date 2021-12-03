@@ -36,7 +36,7 @@ function SEO({
   const { originalPath, language } = useI18next();
 
   const metaDescription = description || site?.siteMetadata?.description;
-  titleTemp = t("site?.siteMetadata?.title")
+  const titleTemp = t("site?.siteMetadata?.title")
   const canonical = pathname
     ? `${site?.siteMetadata?.siteUrl}${pathname}`
     : null;
