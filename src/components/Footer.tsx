@@ -91,14 +91,9 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <a
-                      className="footer_links"
-                      href="https://blog.minhkhangtran.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Blog
-                    </a>
+                    <Link className="footer_links" to="/blog">
+                      <Trans>Blog</Trans>
+                    </Link>
                   </li>
                   <li>
                     <Link className="footer_links" to="/contact">

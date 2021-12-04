@@ -21,7 +21,7 @@ const AboutPage = () => {
       <Layout>
         <SEO
           title={t("About")}
-          description="Hier erfahren Sie mehr über DevLifting und die Ziele"
+          description={t("Learn more about DevLifting and the goals here")}
         />
         <Container id="about" className="my-4">
           <Row className="">
@@ -100,7 +100,10 @@ const AboutPage = () => {
   }
   return (
     <Layout>
-      <SEO title="About me" />
+      <SEO
+        title={t("About")}
+        description={t("Learn more about DevLifting and the goals here")}
+      />
       <Container id="about" className="my-4">
         <Row className="flex-lg-row-reverse">
           <Col lg={6} className="">

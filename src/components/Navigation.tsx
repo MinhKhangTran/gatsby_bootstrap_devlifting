@@ -40,14 +40,9 @@ const Navigation = () => {
             <Link className="nav-link" to="/about">
               <Trans>About</Trans>
             </Link>
-            <a
-              className="nav-link"
-              href="https://blog.minhkhangtran.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link className="nav-link" to="/blog">
               <Trans>Blog</Trans>
-            </a>
+            </Link>
           </Nav>
           <Link className="btn btn-outline-primary" to="/contact">
             <Trans>Contact</Trans>

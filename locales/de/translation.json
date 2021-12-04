@@ -61,5 +61,18 @@
   "The goals": "Die Ziele",
   "The main goal of DevLifting is to create custom and accessible websites. On of our main attention is accessiblity. Websites should be accessible for everyone by default. For example people with low vision or blind people should access all websites. The website should then be still function normally with screen readers or other assistive technologies. There will always be some accessibility issues, but we try our best to deliver a good experience for everyone who visits our pages.": "Das Hauptziel von DevLifting ist es, individuelle und zugängliche Webseiten zu erstellen. Eines unserer Hauptaugenmerke ist die Zugänglichkeit. Websites sollten standardmäßig für jeden zugänglich sein. Zum Beispiel sollten Menschen mit Sehschwäche oder Blinde Zugang zu allen Websites haben. Die Website sollte dann auch mit Bildschirmlesegeräten oder anderen Hilfsmitteln normal funktionieren. Es wird immer einige Probleme mit der Zugänglichkeit geben, aber wir versuchen unser Bestes, um allen Besuchern unserer Seiten ein gutes Erlebnis zu bieten.",
   "We use the latest technology to provide secure and fast websites. Combined with CMS (Content Managment Systems) you can adapt the website agil.": "Wir verwenden die neueste Technologie, um sichere und schnelle Websites zu erstellen. Kombiniert mit CMS (Content Management Systems) können Sie die Website agil anpassen.",
-  "The cherry on the cake is a website with high ranking position on search engines like google and bing. This will draw traffic to the page. With the help of UX (User experience) and with copywriting the page is ready for conversions.": "Das Tüpfelchen auf dem i ist eine Website, die in Suchmaschinen wie Google und Bing hoch platziert ist. Dies wird Besucher auf die Seite ziehen. Mit Hilfe von UX (User Experience) und mit Copywriting ist die Seite bereit für Konversionen."
+  "The cherry on the cake is a website with high ranking position on search engines like google and bing. This will draw traffic to the page. With the help of UX (User experience) and with copywriting the page is ready for conversions.": "Das Tüpfelchen auf dem i ist eine Website, die in Suchmaschinen wie Google und Bing hoch platziert ist. Dies wird Besucher auf die Seite ziehen. Mit Hilfe von UX (User Experience) und mit Copywriting ist die Seite bereit für Konversionen.",
+  "Learn more about DevLifting and the goals here": "Hier erfahren Sie mehr über DevLifting und die Ziele",
+  "Get in Touch!": "Melden Sie sich bei uns!",
+  "Fell free to contact us and we will get back to you as soon as possible!": "Nehmen Sie Kontakt mit uns auf und wir werden uns so schnell wie möglich bei Ihnen melden!",
+  "First Name": "Vorname",
+  "Last Name": "Nachname",
+  "E-Mail Address": "E-Mail Adresse",
+  "Message": "Nachricht",
+  "Submit": "Senden",
+  "Please provide your first name": "Bitte geben Sie Ihren Vornamen an",
+  "Please provide your last name": "Bitte geben Sie Ihren Nachnamen an",
+  "Please provide your e-mail address": "Bitte geben Sie Ihre E-Mail Adresse an",
+  "Please provide your message": "Bitte geben Sie Ihre Nachricht an",
+  "contact_text": "Schon interessiert? <1>Klicken Sie hier, um loszulegen!</1>"
 }
