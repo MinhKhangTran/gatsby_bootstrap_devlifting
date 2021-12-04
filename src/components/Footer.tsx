@@ -26,7 +26,7 @@ const Footer = () => {
       </p> */}
       <Container>
         <Row className="justify-content-between align-items-center">
-          <Col lg={4} className="">
+          <Col lg={3} className="">
             <Link to="/" className="mt-0 text-dark d-flex align-items-center">
               <img src={logo_big} alt="logo of devlifting" height="60" />
             </Link>
@@ -37,7 +37,7 @@ const Footer = () => {
             <div className="footer_socials d-flex gap-3 text-dark">
               <div className="footer_icon">
                 <a
-                  href="https://twitter.com"
+                  href="https://twitter.com/devLifting_"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -47,7 +47,7 @@ const Footer = () => {
               </div>
               <div className="footer_icon">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/MinhKhangTran"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -58,19 +58,19 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col lg={6} className="mt-4">
+          <Col lg={8} className="mt-4">
             <Row>
               <Col md={3} xs={6}>
                 <h3>Home</h3>
                 <ul className="list-unstyled">
                   <li>
                     <Link to="/#features" className="footer_links">
-                      Beneftis
+                      <Trans>Benefits</Trans>
                     </Link>
                   </li>
                   <li>
                     <Link to="/#process" className="footer_links">
-                      Process
+                      <Trans>Process</Trans>
                     </Link>
                   </li>
                   <li>
@@ -81,11 +81,13 @@ const Footer = () => {
                 </ul>
               </Col>
               <Col md={3} xs={6}>
-                <h3>Company</h3>
+                <h3>
+                  <Trans>Company</Trans>
+                </h3>
                 <ul className="list-unstyled">
                   <li>
                     <Link className="footer_links" to="/about">
-                      About
+                      <Trans>About</Trans>
                     </Link>
                   </li>
                   <li>
@@ -100,13 +102,15 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link className="footer_links" to="/contact">
-                      Contact
+                      <Trans>Contact</Trans>
                     </Link>
                   </li>
                 </ul>
               </Col>
               <Col md={3} xs={6}>
-                <h3>Legal</h3>
+                <h3>
+                  <Trans>Legal</Trans>
+                </h3>
                 <ul className="list-unstyled">
                   <li>
                     <Link className="footer_links" to="/privacy">
@@ -147,7 +151,8 @@ const Footer = () => {
             </Row>
           </Col>
           <p className="text-center pt-3 mt-4 mb-0 copyright">
-            &copy; {new Date().getFullYear()}, DevLifting. All rights reserved
+            &copy; {new Date().getFullYear()}, DevLifting.{" "}
+            <Trans>All rights reserved</Trans>
           </p>
         </Row>
       </Container>
