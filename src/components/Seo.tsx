@@ -1,19 +1,21 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import { SeoQuery } from "../types.generated";
-import { useI18next,useTranslation } from "gatsby-plugin-react-i18next";
+
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next";
 
 function SEO({
   description,
-  lang = "en",
-
+  lang = "de",
+  meta = [],
+  image: metaImage,
   title,
   pathname,
 }: {
   description?: string;
   lang?: string;
-
+  meta?: any[];
+  image?: any;
   title: string;
   pathname?: string;
 }) {
@@ -33,17 +35,22 @@ function SEO({
     `
   );
   const { t } = useTranslation();
-  const { originalPath, language } = useI18next();
+  const { language } = useI18next();
 
-  const metaDescription = description || site?.siteMetadata?.description;
-  const titleTemp = t(`${site?.siteMetadata?.title}`)
+  const metaDescription =
+    description || t(`${site?.siteMetadata?.description}`);
+  const image =
+    metaImage && metaImage.src
+      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+      : null;
+  const titleTemp = t(`${site?.siteMetadata?.title}`);
   const canonical = pathname
     ? `${site?.siteMetadata?.siteUrl}${pathname}`
     : null;
   return (
     <Helmet
       htmlAttributes={{
-        lang:language,
+        lang: language,
       }}
       title={title}
       titleTemplate={`%s | ${titleTemp}`}
@@ -64,7 +71,7 @@ function SEO({
         },
         {
           name: "keywords",
-          content: site?.siteMetadata?.keywords,
+          content: site.siteMetadata.keywords.join(","),
         },
         {
           property: `og:title`,
@@ -78,7 +85,47 @@ function SEO({
           property: `og:type`,
           content: `website`,
         },
-      ]}
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata.author,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+      ]
+        .concat(
+          metaImage
+            ? [
+                {
+                  property: "og:image",
+                  content: image,
+                },
+                {
+                  property: "og:image:width",
+                  content: metaImage.width,
+                },
+                {
+                  property: "og:image:height",
+                  content: metaImage.height,
+                },
+                {
+                  name: "twitter:card",
+                  content: "summary_large_image",
+                },
+              ]
+            : [
+                {
+                  name: "twitter:card",
+                  content: "summary",
+                },
+              ]
+        )
+        .concat(meta)}
     />
   );
 }

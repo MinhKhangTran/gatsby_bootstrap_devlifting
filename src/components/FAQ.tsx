@@ -34,7 +34,7 @@ const FAQ = () => {
       id: 5,
       question: "What is the purpose of a CMS",
       answer:
-        "A content managment system stores your data like assets and text. In our case, we use open-source softwares like wordpress, contentful or graphCMS. It is easy to handle and we use it to change images and text flexible. For instance: If you change an image in the CMS, the image on your website will change, too.",
+        "A content managment system stores your data like assets and text. In our case, we use softwares like wordpress, contentful or graphCMS. It is easy to handle and we use it to change images and text flexible. For instance: If you change an image in the CMS, the image on your website will change, too.",
     },
   ];
   return (
@@ -44,8 +44,10 @@ const FAQ = () => {
           <Trans>FREQUENTLY ASKED QUESTIONS</Trans>
         </h2>
         <p className="text-center text-dark mb-4">
-          <Trans i18nKey="faq_subtitle">Feel free to <Link to="/contact">contact me</Link> if you can't find
-            the answers you are looking for.</Trans>
+          <Trans i18nKey="faq_subtitle">
+            Feel free to <Link to="/contact">contact me</Link> if you can't find
+            the answers you are looking for.
+          </Trans>
         </p>
         <Accordion defaultActiveKey="1" flush>
           {faqArray.map((faq) => {
@@ -53,11 +55,10 @@ const FAQ = () => {
             return (
               <Accordion.Item key={id} eventKey={id + ""}>
                 <Accordion.Header as="h3">
-                  <Trans>
-                    {question}</Trans>
+                  <Trans>{question}</Trans>
                 </Accordion.Header>
-                <Accordion.Body><Trans>{answer}</Trans>
-
+                <Accordion.Body>
+                  <Trans>{answer}</Trans>
                 </Accordion.Body>
               </Accordion.Item>
             );

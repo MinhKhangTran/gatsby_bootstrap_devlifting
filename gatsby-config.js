@@ -10,17 +10,17 @@ module.exports = {
     title: "Our heavy lifting will improve your web presence!",
     description:
       "DevLifting is your freelancer for creating accessible and conversion optimized websites.",
-    keywords: "bootstrap, gatsby, devlifting",
-    author: "mkt",
+    keywords: ["bootstrap", "gatsby", "devLifting"],
+    author: "@devLifting_",
   },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     {
-      resolve: 'gatsby-plugin-sitemap',
+      resolve: "gatsby-plugin-sitemap",
       options: {
-        output: '/sitemap',
+        output: "/sitemap",
         query: `
         {
           site {
@@ -47,7 +47,7 @@ module.exports = {
         serialize: ({ path }) => {
           return {
             url: path,
-            changefreq: 'weekly',
+            changefreq: "weekly",
             priority: 0.7,
           };
         },
@@ -97,7 +97,7 @@ module.exports = {
       options: {
         localeJsonSourceName: `locale`,
         languages: [`en`, `de`],
-        defaultLanguage: `en`,
+        defaultLanguage: `de`,
         siteUrl,
         i18nextOptions: {
           interpolation: {
@@ -110,7 +110,7 @@ module.exports = {
           {
             matchPath: "/:lang?/blog/:uid",
             getLanguageFromPath: true,
-            excludeLanguages: ["es"],
+            excludeLanguages: ["en"],
           },
           {
             matchPath: "/preview",

@@ -2,21 +2,23 @@ import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import CTA from "../components/CTA";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 
 const AboutPage = () => {
+  const { t } = useTranslation();
   let isPageWide = useMediaQuery("(min-width: 992px)");
+
   const emailAddress = "devlifting@gmail.com";
   const about_text =
     "The master mind behind DevLifting is Minh Khang Tran. He is a freelancer from Germany. He specialized himself in creating static websites like business & marketing pages, landing pages, blogs or portfolios. He works with both locale and international customers to fulfill their needs.";
   if (isPageWide) {
     return (
       <Layout>
-        <SEO title="About me" />
+        <SEO title={t("About")} />
         <Container id="about" className="my-4">
           <Row className="">
             <Col lg={6}>
