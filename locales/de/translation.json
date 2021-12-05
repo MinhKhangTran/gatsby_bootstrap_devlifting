@@ -1,6 +1,7 @@
 {
-  "Our heavy lifting will improve your web presence!": "Unsere Aufgabe ist es ihre Webpräsenz zu verbessern!",
+  "Our heavy lifting will improve your web presence!": "Unsere Aufgabe ist es ihre Webpräsenz aufzubauen!",
   "The focus is growing your business by making your website accessible and conversion optimized!": "Der Fokus ist Ihr Unternehmen aufzubauen, indem wir Ihre Website zugänglich und konversionsoptimiert machen!",
+  "DevLifting is your freelancer for creating accessible and conversion optimized websites.": "DevLifting ist Ihr Freelancer für die Erstellung barrierefreier und konversionsoptimierter Websites.",
   "START NOW!": "STARTE JETZT!",
   "LEARN MORE!": "ERFAHRE MEHR!",
   "Benefits": "Vorteile",
@@ -74,5 +75,15 @@
   "Please provide your last name": "Bitte geben Sie Ihren Nachnamen an",
   "Please provide your e-mail address": "Bitte geben Sie Ihre E-Mail Adresse an",
   "Please provide your message": "Bitte geben Sie Ihre Nachricht an",
-  "contact_text": "Schon interessiert? <1>Klicken Sie hier, um loszulegen!</1>"
+  "Please provide your budget": "Bitte geben Sie Ihr Budget an",
+  "Please provide your company": "Bitte geben Sie Ihr Unternehmen an",
+  "contact_text": "Schon interessiert? <1>Klicken Sie hier, um loszulegen!</1>",
+  "work_text": "Möchten Sie nur 'Hallo' sagen? <1>Klicken Sie hier, um uns zu kontaktieren!</1>",
+  "Let's work together": "Lassen Sie uns zusammenarbeiten",
+  "We would love to hear from you. Just fill this form and we will connect to you as soon as possible": "Wir würden uns freuen, von Ihnen zu hören. Füllen Sie einfach dieses Formular aus und wir werden uns so schnell wie möglich mit Ihnen in Verbindung setzen",
+  "Just fill this form and we will connect to you as soon as possible": "Füllen Sie einfach dieses Formular aus und wir werden uns so schnell wie möglich mit Ihnen in Verbindung setzen",
+  "Expected Budget": "Erwartetes Budget",
+  "How can we help you?": "Wie können wir Ihnen helfen?",
+
+  "This site is still under construction come later again 😵‍💫": "Diese Seite befindet sich noch im Aufbau, kommen sie später nochmals 😵‍💫"
 }

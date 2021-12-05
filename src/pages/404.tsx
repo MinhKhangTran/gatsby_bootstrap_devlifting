@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import { Container } from "react-bootstrap";
+import { Trans } from "react-i18next";
 
 // markup
 const NotFoundPage = () => {
@@ -11,7 +12,9 @@ const NotFoundPage = () => {
       <SEO title="404 oh no🥲" />
       <Container>
         <main>
-          <h1>Page not found</h1>
+          <h1>
+            <Trans>Page not found</Trans>
+          </h1>
           <p>
             Sorry{" "}
             <span role="img" aria-label="Pensive emoji">

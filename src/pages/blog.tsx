@@ -1,5 +1,7 @@
+import { graphql } from "gatsby";
 import React from "react";
 import { Container } from "react-bootstrap";
+import { Trans } from "react-i18next";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import construction from "../images/construction.svg";
@@ -9,7 +11,11 @@ const BlogPage = () => {
     <Layout>
       <SEO title="Blog" />
       <Container>
-        <h1>Under construction come later again 😵‍💫</h1>
+        <h1>
+          <Trans>
+            This site is still under construction come later again 😵‍💫
+          </Trans>
+        </h1>
         <img
           src={construction}
           className="img-fluid my-4"
@@ -21,3 +27,17 @@ const BlogPage = () => {
 };
 
 export default BlogPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
