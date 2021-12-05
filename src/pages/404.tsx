@@ -3,35 +3,34 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import { Container } from "react-bootstrap";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
+import lost from "../images/lost.svg";
 
 // markup
 const NotFoundPage = () => {
+  const { t } = useTranslation();
   return (
     <Layout>
-      <SEO title="404 oh no🥲" />
+      <SEO title={t("404")} />
       <Container>
         <main>
           <h1>
             <Trans>Page not found</Trans>
           </h1>
           <p>
-            Sorry{" "}
-            <span role="img" aria-label="Pensive emoji">
-              😔
-            </span>{" "}
-            we couldn’t find what you were looking for.
-            <br />
-            {process.env.NODE_ENV === "development" ? (
-              <code>
-                <br />
-                Try creating a page in <code>src/pages/</code>.
-                <br />
-              </code>
-            ) : null}
-            <br />
-            <Link to="/">Go home</Link>.
+            <Trans>Sorry we couldn’t find what you were looking for.</Trans>
           </p>
+          <Link to="/">
+            <Trans>Go home</Trans>
+          </Link>
+          .
+          <article className="d-flex justify-content-center align-items-center">
+            <img
+              src={lost}
+              className="img-fluid my-4 w-50"
+              alt="A man wandering in the universe looking where to go"
+            />
+          </article>
         </main>
       </Container>
     </Layout>

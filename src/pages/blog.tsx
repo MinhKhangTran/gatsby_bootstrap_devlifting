@@ -1,15 +1,19 @@
 import { graphql } from "gatsby";
 import React from "react";
 import { Container } from "react-bootstrap";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import construction from "../images/construction.svg";
 
 const BlogPage = () => {
+  const { t } = useTranslation();
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO
+        title={t("Blog")}
+        description={t("A curated list of all my blog posts")}
+      />
       <Container>
         <h1>
           <Trans>
