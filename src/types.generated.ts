@@ -365,6 +365,7 @@ export type ContentfulBlog = ContentfulEntry &
     parent?: Maybe<Node>;
     readingTime?: Maybe<Scalars["Int"]>;
     richtext?: Maybe<ContentfulBlogRichtext>;
+    slug?: Maybe<Scalars["String"]>;
     spaceId?: Maybe<Scalars["String"]>;
     sys?: Maybe<ContentfulBlogSys>;
     thumbnail?: Maybe<ContentfulAsset>;
@@ -675,6 +676,7 @@ export enum ContentfulBlogFieldsEnum {
   RichtextReferencesSysType = "richtext___references___sys___type",
   RichtextReferencesTitle = "richtext___references___title",
   RichtextReferencesUpdatedAt = "richtext___references___updatedAt",
+  Slug = "slug",
   SpaceId = "spaceId",
   SysContentTypeSysId = "sys___contentType___sys___id",
   SysContentTypeSysLinkType = "sys___contentType___sys___linkType",
@@ -751,6 +753,7 @@ export type ContentfulBlogFilterInput = {
   parent?: InputMaybe<NodeFilterInput>;
   readingTime?: InputMaybe<IntQueryOperatorInput>;
   richtext?: InputMaybe<ContentfulBlogRichtextFilterInput>;
+  slug?: InputMaybe<StringQueryOperatorInput>;
   spaceId?: InputMaybe<StringQueryOperatorInput>;
   sys?: InputMaybe<ContentfulBlogSysFilterInput>;
   thumbnail?: InputMaybe<ContentfulAssetFilterInput>;
@@ -3596,6 +3599,7 @@ export type QueryContentfulBlogArgs = {
   parent?: InputMaybe<NodeFilterInput>;
   readingTime?: InputMaybe<IntQueryOperatorInput>;
   richtext?: InputMaybe<ContentfulBlogRichtextFilterInput>;
+  slug?: InputMaybe<StringQueryOperatorInput>;
   spaceId?: InputMaybe<StringQueryOperatorInput>;
   sys?: InputMaybe<ContentfulBlogSysFilterInput>;
   thumbnail?: InputMaybe<ContentfulAssetFilterInput>;
@@ -5416,8 +5420,80 @@ export type BlogAndLangQueryVariables = Exact<{
 
 export type BlogAndLangQuery = {
   allContentfulBlog: {
-    nodes: Array<{ richtext?: { raw?: string | undefined } | undefined }>;
+    nodes: Array<{
+      date?: string | undefined;
+      id: string;
+      readingTime?: number | undefined;
+      slug?: string | undefined;
+      title?: string | undefined;
+      thumbnail?:
+        | {
+            id: string;
+            title?: string | undefined;
+            gatsbyImageData?: unknown | undefined;
+          }
+        | undefined;
+      excerpt?: { excerpt?: string | undefined } | undefined;
+      richtext?:
+        | {
+            raw?: string | undefined;
+            references?:
+              | Array<
+                  | {
+                      __typename: "ContentfulAsset";
+                      contentful_id: string;
+                      title?: string | undefined;
+                      description?: string | undefined;
+                      gatsbyImageData?: unknown | undefined;
+                    }
+                  | undefined
+                >
+              | undefined;
+          }
+        | undefined;
+    }>;
   };
+  locales: {
+    edges: Array<{
+      node: {
+        ns?: string | undefined;
+        data?: string | undefined;
+        language?: string | undefined;
+      };
+    }>;
+  };
+};
+
+export type SingleBlogpostQueryVariables = Exact<{
+  slug: Scalars["String"];
+  language: Scalars["String"];
+}>;
+
+export type SingleBlogpostQuery = {
+  contentfulBlog?:
+    | {
+        title?: string | undefined;
+        date?: string | undefined;
+        readingTime?: number | undefined;
+        richtext?:
+          | {
+              raw?: string | undefined;
+              references?:
+                | Array<
+                    | {
+                        __typename: "ContentfulAsset";
+                        contentful_id: string;
+                        title?: string | undefined;
+                        description?: string | undefined;
+                        gatsbyImageData?: unknown | undefined;
+                      }
+                    | undefined
+                  >
+                | undefined;
+            }
+          | undefined;
+      }
+    | undefined;
   locales: {
     edges: Array<{
       node: {
