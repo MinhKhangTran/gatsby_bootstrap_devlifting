@@ -5475,6 +5475,7 @@ export type SingleBlogpostQuery = {
         title?: string | undefined;
         date?: string | undefined;
         readingTime?: number | undefined;
+        excerpt?: { excerpt?: string | undefined } | undefined;
         richtext?:
           | {
               raw?: string | undefined;

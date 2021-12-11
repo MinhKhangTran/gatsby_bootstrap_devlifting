@@ -14,6 +14,7 @@ import { BlogAndLangQuery } from "../types.generated";
 import { BLOCKS } from "@contentful/rich-text-types";
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 import Moment from "react-moment";
+import "moment/locale/de";
 
 const options = {
   renderNode: {
@@ -74,7 +75,7 @@ const BlogPage = ({ data }: { data: BlogAndLangQuery }) => {
                   </Link>
                   <p className="lead text-dark ">{post.excerpt?.excerpt}</p>
                   <div className="mt-5 d-flex gap-2 text-primary">
-                    <Moment className="" format="DD.MMMM.YYYY">
+                    <Moment locale="de" className="" format="DD.MMMM YYYY">
                       {post.date as any}
                     </Moment>
                     <span>-</span>
@@ -85,7 +86,6 @@ const BlogPage = ({ data }: { data: BlogAndLangQuery }) => {
             );
           })}
         </Row>
-        {/* <div>{renderRichText(richtext, options)}</div> */}
       </Container>
     </Layout>
   );

@@ -1,28 +1,35 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import React from "react";
 import Layout from "../../components/Layout";
 import { SingleBlogpostQuery } from "../../types.generated";
-import { BLOCKS } from "@contentful/rich-text-types";
+import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import {
   ContentfulRichTextGatsbyReference,
   renderRichText,
   RenderRichTextData,
 } from "gatsby-source-contentful/rich-text";
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
-import { Col, Container, Row } from "react-bootstrap";
+import { Breadcrumb, Col, Container, Row } from "react-bootstrap";
 import SEO from "../../components/Seo";
+import CTA from "../../components/CTA";
 
 const options = {
+  renderMark: {
+    [MARKS.ITALIC]: (text: string) => <span className="bild_desc">{text}</span>,
+  },
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
       const { gatsbyImageData, description } = node.data.target;
 
       return (
-        <GatsbyImage
-          image={getImage(gatsbyImageData)!}
-          alt={description}
-          className="my-3"
-        />
+        <>
+          <GatsbyImage
+            image={getImage(gatsbyImageData)!}
+            alt={description}
+            className="my-3"
+          />
+          <p className="fst-italic text-secondary bild_desc">{description}</p>
+        </>
       );
     },
   },
@@ -34,14 +41,28 @@ const SingleBlogPost = ({ data }: { data: SingleBlogpostQuery }) => {
 
   return (
     <Layout>
-      <SEO title={data.contentfulBlog?.title!} />
+      <SEO
+        title={data.contentfulBlog?.title!}
+        description={data.contentfulBlog?.excerpt?.excerpt}
+      />
+
       <Container>
         <Row>
           <Col lg={8} md={10} className="mx-auto">
+            <Breadcrumb className="mt-5">
+              <li className="breadcrumb-item">
+                <Link to="/blog">Blog</Link>
+              </li>
+
+              <Breadcrumb.Item active>
+                {data.contentfulBlog?.title}
+              </Breadcrumb.Item>
+            </Breadcrumb>
             <div className="my-4">{renderRichText(richtext, options)}</div>
           </Col>
         </Row>
       </Container>
+      <CTA />
     </Layout>
   );
 };
@@ -54,6 +75,9 @@ export const SingleBlogPostQuery = graphql`
       title
       date(locale: "DD MM YYYY")
       readingTime
+      excerpt {
+        excerpt
+      }
       richtext {
         raw
         references {
