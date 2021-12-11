@@ -5,9 +5,33 @@ import { Trans, useTranslation } from "react-i18next";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import construction from "../images/construction.svg";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { BlogAndLangQuery } from "../types.generated";
+import { BLOCKS } from "@contentful/rich-text-types";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const BlogPage = () => {
+const options = {
+  renderNode: {
+    [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
+      console.log(node);
+
+      const { gatsbyImageData, description } = node.data.target;
+
+      return (
+        <GatsbyImage
+          image={getImage(gatsbyImageData)!}
+          alt={description}
+          className="mb-10"
+        />
+      );
+    },
+  },
+};
+
+const BlogPage = ({ data }: { data: BlogAndLangQuery }) => {
   const { t } = useTranslation();
+  console.log(data);
+
   return (
     <Layout>
       <SEO
@@ -15,16 +39,9 @@ const BlogPage = () => {
         description={t("A curated list of all my blog posts")}
       />
       <Container>
-        <h1>
-          <Trans>
-            This site is still under construction come later again 😵‍💫
-          </Trans>
-        </h1>
-        <img
-          src={construction}
-          className="img-fluid my-4"
-          alt="Two man building a house from scratch."
-        />
+        <div>
+          {renderRichText(data.allContentfulBlog.nodes[0].richtext, options)}
+        </div>
       </Container>
     </Layout>
   );
@@ -32,8 +49,25 @@ const BlogPage = () => {
 
 export default BlogPage;
 
-export const query = graphql`
-  query ($language: String!) {
+export const BlogAndLang = graphql`
+  query BlogAndLang($language: String!) {
+    allContentfulBlog {
+      nodes {
+        richtext {
+          raw
+          references {
+            ... on ContentfulAsset {
+              contentful_id
+              title
+              description
+              gatsbyImageData(placeholder: TRACED_SVG)
+              __typename
+            }
+          }
+        }
+      }
+    }
+
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {

@@ -524,7 +524,7 @@ const PrivacyPage = () => {
 export default PrivacyPage;
 
 export const query = graphql`
-  query ($language: String!) {
+  query LangPrivacy($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {

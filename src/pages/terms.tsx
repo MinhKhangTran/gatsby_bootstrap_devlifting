@@ -317,7 +317,7 @@ const TermsPage = () => {
 export default TermsPage;
 
 export const query = graphql`
-  query ($language: String!) {
+  query LangTerms($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {

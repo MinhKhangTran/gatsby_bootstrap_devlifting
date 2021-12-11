@@ -447,7 +447,7 @@ const WorkPage = () => {
 export default WorkPage;
 
 export const query = graphql`
-  query ($language: String!) {
+  query LangWork($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {

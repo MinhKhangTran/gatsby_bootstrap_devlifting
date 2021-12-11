@@ -1,5 +1,5 @@
 #hero {
-  height: calc(100vh - 56px);
+  height: calc(100vh - 62px);
   max-height: -webkit-fill-available;
   background: rgb(181, 134, 110);
   background: linear-gradient(0deg, #b5866e 50%, rgba(181, 134, 110, 0) 100%);
@@ -24,7 +24,7 @@
 
 @media screen and (min-width: 768px) {
   #hero {
-    height: calc(100vh - 56px);
+    height: calc(100vh - 62px);
     background: rgb(181, 134, 110);
     background: linear-gradient(0deg, #b5866e 50%, rgba(181, 134, 110, 0) 100%);
     h1 {
@@ -53,7 +53,7 @@
 @media screen and (min-width: 992px) {
   #hero {
     height: calc(100vh);
-    margin-top: -66px;
+    margin-top: -62px;
     background: rgb(181, 134, 110);
     background: linear-gradient(
       270deg,

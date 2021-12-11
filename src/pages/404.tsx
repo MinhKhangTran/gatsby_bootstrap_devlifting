@@ -40,7 +40,7 @@ const NotFoundPage = () => {
 export default NotFoundPage;
 
 export const query = graphql`
-  query ($language: String!) {
+  query Lang404($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {

@@ -53,7 +53,13 @@ module.exports = {
         },
       },
     },
-
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `f07g68yd3yyd`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
