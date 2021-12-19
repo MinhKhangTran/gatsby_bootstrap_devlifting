@@ -54,7 +54,7 @@ const BlogPage = ({ data }: { data: BlogAndLangQuery }) => {
             big world of web development.
           </Trans>
         </p>
-        <Row className="my-5">
+        <Row className="my-5 mx-0 gap-5">
           {data.allContentfulBlog.nodes.map((post) => {
             return (
               <Col
@@ -95,7 +95,7 @@ export default BlogPage;
 
 export const BlogAndLang = graphql`
   query BlogAndLang($language: String!) {
-    allContentfulBlog {
+    allContentfulBlog(sort: { order: DESC, fields: date }) {
       nodes {
         date(locale: "DD MM YYYY")
         id
