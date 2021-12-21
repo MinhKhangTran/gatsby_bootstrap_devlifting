@@ -74,7 +74,7 @@ const BlogPage = ({ data }: { data: BlogAndLangQuery }) => {
                     <h2 className="">{post.title}</h2>
                   </Link>
                   <p className="lead text-dark ">{post.excerpt?.excerpt}</p>
-                  <div className="mt-5 d-flex gap-2 text-primary">
+                  <div className="mt-5 d-flex gap-2 text-primary card_unten">
                     <Moment locale="de" className="" format="DD.MMMM YYYY">
                       {post.date as any}
                     </Moment>

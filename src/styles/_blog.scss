@@ -4,9 +4,20 @@
   }
   .card {
     border-radius: 0.75rem;
-    margin: 0 -1em;
+  }
+  .card_unten {
+    margin-top: auto;
+  }
+  article {
   }
 }
 .bild_desc {
   color: #916c58 !important;
+}
+@media screen and (min-width: 768px) {
+  #blog {
+    .card {
+      margin: 0 -1em;
+    }
+  }
 }
