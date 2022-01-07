@@ -2,7 +2,6 @@ import { Link } from "gatsby";
 import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import heroImg from "../images/Hero_illustration.svg";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Hero = () => {
   return (
@@ -10,17 +9,17 @@ const Hero = () => {
       <Container className="">
         <Row className="hero_row">
           <Col lg={6}>
-            <h1>Our heavy lifting will improve your web presence!</h1>
+            <h1>Unsere Aufgabe ist es ihre Webpräsenz aufzubauen!</h1>
             <p className="lead">
-              The focus is growing your business by making your website
-              accessible and conversion optimized!
+              Der Fokus ist Ihr Unternehmen aufzubauen, indem wir Ihre Website
+              zugänglich und konversionsoptimiert machen!
             </p>
             <div className="hero_buttons d-flex gap-3 justify-content-center justify-content-lg-start mt-4 mt-lg-5">
               <Link to="/work" className="btn btn-primary btn-lg">
-                START NOW!
+                STARTE JETZT!
               </Link>
               <Button size="lg" variant="outline-primary" href="#features">
-                LEARN MORE!
+                ERFAHRE MEHR!
               </Button>
             </div>
           </Col>

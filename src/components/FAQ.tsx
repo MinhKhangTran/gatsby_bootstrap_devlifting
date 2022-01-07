@@ -6,45 +6,46 @@ const FAQ = () => {
   const faqArray = [
     {
       id: 1,
-      question: "Why do you call yourself DevLifting?",
+      question: "Was bedeutet DevLifting?",
       answer:
-        "Dev is a short form of Developing and Lifting comes from Powerlifting. Both are the passion of the creator of this website.",
+        "Dev ist die Kurzform von Developing (engl: Entwickeln) und Lifting kommt vom PowerLifting. Beides ist Leidenschaft des Schöfpers dieser Website",
     },
     {
       id: 2,
-      question: "Accessibility? Is that important on websites?",
+      question:
+        "Zugänglichkeit oder Barrierefreiheit? Ist das wichtig für Websites?",
       answer:
-        "It is very important. Nowadays the internet is important for everyone. With accessibility it is guaranteed, that people with disabilities can navigate through your website. The site should be navigate with key board and the screen reader for people with bad vision should be able to read the content aloud.",
+        "Es ist sehr wichtig. Heutzutage ist das Internet für jeden wichtig. Mit der Barrierefreiheit ist gewährleistet, dass Menschen mit Behinderungen durch Ihre Website navigieren können. Die Website sollte mit der Tastatur navigierbar sein und der Screenreader für Menschen mit Sehschwäche sollte den Inhalt laut vorlesen können.",
     },
     {
       id: 3,
-      question: "What do you mean with Conversion?",
+      question: "Was bedeutet Konversion?",
       answer:
-        "In marketing this word is used when a customer buys something on your website or signs to your newsletter. It is an active action of the customer after visiting and watching your website.",
+        "Im Marketing wird dieses Wort verwendet, wenn ein Kunde etwas auf Ihrer Website kauft oder sich für Ihren Newsletter anmeldet. Es ist eine aktive Handlung des Kunden, nachdem er Ihre Website besucht und angesehen hat.",
     },
     {
       id: 4,
       question:
-        "Static Sites? Are there many types of websites? I thought websites are websites?",
+        "Statische Websites? Gibt es viele Arten von Websites? Ich dachte, Websites sind Websites?",
       answer:
-        "Static websites are like posters. They are 'hard-coded' in the HTML and don't change for the visited viewer. Therefore this type of websites are used for landing page, blogs or portfolios. 'Dynamic Site's key features are mainly the CRUD (Creat, Read, Update and Delete) operations and/or a possibility to login or register. It is more complex due to a connection to a database.",
+        "Statische Websites sind wie Plakate. Sie sind im HTML-Code 'fest vorgeschrieben' und ändern sich für den Besucher nicht. Daher wird diese Art von Websites für Geschäfts- und Marketingseiten, Landing Pages, Blogs oder Portfolios verwendet. Die Hauptmerkmale einer dynamischen Website sind hauptsächlich CRUD-Operationen (Erstellen (engl. Create), Lesen (engl. Read), Aktualisieren (engl. Update) und Löschen (engl. Delete)) und/oder eine Möglichkeit zur Anmeldung oder Registrierung. Sie ist komplexer, da eine Verbindung zu einer Datenbank besteht.",
     },
     {
       id: 5,
-      question: "What is the purpose of a CMS",
+      question: "Was ist der Zweck eines CMS?",
       answer:
-        "A content managment system stores your data like assets and text. In our case, we use softwares like wordpress, contentful or graphCMS. It is easy to handle and we use it to change images and text flexible. For instance: If you change an image in the CMS, the image on your website will change, too.",
+        "Ein Content-Management-System speichert Ihre Daten wie Bilder und Texte. In unserem Fall verwenden wir Software wie Wordpress, Contentful oder GraphCMS.  Sie ist einfach zu handhaben und wir nutzen sie, um Bilder und Texte flexibel zu ändern. Zum Beispiel: Wenn Sie ein Bild im CMS ändern, wird sich auch das Bild auf Ihrer Website ändern.",
     },
   ];
   return (
     <section id="faq" aria-label="faq" className="section">
       <Container>
         <h2 className="text-center text-primary fw-bold text-uppercase">
-          FREQUENTLY ASKED QUESTIONS
+          HÄUFIG GESTELLTE FRAGEN
         </h2>
         <p className="text-center text-dark mb-4">
-          Feel free to <Link to="/contact">contact me</Link> if you can't find
-          the answers you are looking for.
+          Sie können <Link to="/contact">mich gerne kontaktieren</Link>, wenn
+          Sie die gewünschten Antworten nicht finden.
         </p>
         <Accordion defaultActiveKey="1" flush>
           {faqArray.map((faq) => {

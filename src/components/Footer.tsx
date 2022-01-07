@@ -29,7 +29,7 @@ const Footer = () => {
               <img src={logo_big} alt="logo of devlifting" height="60" />
             </Link>
             <p className=" my-2">
-              Our heavy lifting will improve your web presence!
+              Unsere Aufgabe ist es ihre Webpräsenz aufzubauen!
             </p>
 
             <div className="footer_socials d-flex gap-3 text-dark">
@@ -59,16 +59,16 @@ const Footer = () => {
           <Col lg={8} className="mt-4">
             <Row>
               <Col md={4} xs={6}>
-                <h3>Home</h3>
+                <h3>Homepage</h3>
                 <ul className="list-unstyled">
                   <li>
                     <Link to="/#features" className="footer_links">
-                      Benefits
+                      Vorteile
                     </Link>
                   </li>
                   <li>
                     <Link to="/#process" className="footer_links">
-                      Process
+                      Prozess
                     </Link>
                   </li>
                   <li>
@@ -79,11 +79,11 @@ const Footer = () => {
                 </ul>
               </Col>
               <Col md={4} xs={6}>
-                <h3>Company</h3>
+                <h3>Unternehmen</h3>
                 <ul className="list-unstyled">
                   <li>
                     <Link className="footer_links" to="/about">
-                      About
+                      Über uns
                     </Link>
                   </li>
                   <li>
@@ -93,13 +93,13 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link className="footer_links" to="/contact">
-                      Contact
+                      Kontakt
                     </Link>
                   </li>
                 </ul>
               </Col>
               <Col md={4} xs={6}>
-                <h3>Legal</h3>
+                <h3>Rechtliches</h3>
                 <ul className="list-unstyled">
                   <li>
                     <Link className="footer_links" to="/privacy">
@@ -140,7 +140,8 @@ const Footer = () => {
             </Row>
           </Col>
           <p className="text-center pt-3 mt-4 mb-0 copyright">
-            &copy; {new Date().getFullYear()}, DevLifting. All rights reserved
+            &copy; {new Date().getFullYear()}, DevLifting. Alle Rechte
+            vorbehalten.
           </p>
         </Row>
       </Container>

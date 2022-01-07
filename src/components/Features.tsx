@@ -12,37 +12,38 @@ const Features = () => {
   const featArray = [
     {
       id: 1,
-      title: "Fast",
+      title: "Schnell",
       icon: <FaTachometerAlt aria-hidden="true" size="3em" />,
-      text: "Using the latest technology to generate fast static websites. Your website will be fast, safe and scalable.",
+      text: "Wir verwenden die neueste Technologie, um schnelle statische Websites zu erstellen. Ihre Website wird schnell, sicher und skalierbar sein.",
     },
     {
       id: 2,
-      title: "Accessible",
+      title: "Zugänglich",
       icon: <FaUniversalAccess aria-hidden="true" size="3em" />,
-      text: "Websites should be accessible for everyone by default. So your website can be used and seen by everyone.",
+      text: "Websites sollten standardmäßig für jeden barrierefrei sein. So kann Ihre Website von allen genutzt und gesehen werden.",
     },
     {
       id: 3,
-      title: "Search Engine Friendly",
+      title: "Suchmaschinen Freundlich",
       icon: <FaSearchengin aria-hidden="true" size="3em" />,
-      text: "With Search Engine Optimaztion (SEO) your business will get traffic and a higher position on Google. With conversion optimized content your website will sell.",
+      text: "Mit Suchmaschinenoptmierung (SEO) erhält Ihr Unternehmen Traffic und eine höhere Position bei Google. Mit konversionsoptimierten Inhalten kommt es auf Ihrer Website zu Verkaufsabschlüssen.",
     },
     {
       id: 4,
-      title: "Customizable Content",
+      title: "Anpassbare Inhalte",
       icon: <FaDatabase aria-hidden="true" size="3em" />,
-      text: "With the help of chosen Content Management Systems (CMS) you can easily maintain and update your content flexible.",
+      text: "Mit Hilfe ausgewählter Content-Management-Systeme (CMS) können Sie Ihre Inhalte einfach und flexibel pflegen und aktualisieren.",
     },
   ];
   return (
     <section id="features" aria-label="features" className="section">
       <Container>
         <h2 className="text-center text-primary fw-bold text-uppercase">
-          Full-Service Package
+          Rundum-Sorglos-Paket
         </h2>
         <p className="text-center text-dark mb-4">
-          These are our key benefits help you build your business up.
+          Dies sind unsere wichtigsten Vorteile, die Ihnen helfen, Ihr
+          Unternehmen aufzubauen.
         </p>
         <Row>
           {featArray.map((feat) => {

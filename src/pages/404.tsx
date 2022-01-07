@@ -13,9 +13,9 @@ const NotFoundPage = () => {
       <SEO title="404" />
       <Container>
         <main>
-          <h1>Page not found</h1>
-          <p>Sorry we couldn’t find what you were looking for.</p>
-          <Link to="/">Go home</Link>.
+          <h1>Seite nicht gefunden</h1>
+          <p>Leider konnten wir nicht finden, wonach Sie gesucht haben.</p>
+          <Link to="/">Zurück zur Homepage</Link>.
           <article className="d-flex justify-content-center align-items-center">
             <img
               src={lost}

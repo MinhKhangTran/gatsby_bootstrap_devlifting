@@ -10,16 +10,16 @@ const Process = () => {
   const processArray = [
     {
       id: 1,
-      title: "Designing",
+      title: "Gestaltung",
       items: [
-        { id: 1, text: "Planing & implementing your goals for the website" },
+        { id: 1, text: "Planung und Umsetzung Ihrer Ziele für die Website" },
         {
           id: 2,
-          text: "Building Wireframing for desktop and handheld devices",
+          text: "Erstellung von Wireframing für Desktop- und Handheld-Geräte",
         },
         {
           id: 3,
-          text: "From the beginning the focus is on UX/UI, Conversion and Accessibility.",
+          text: "Von Anfang an liegt der Fokus bei uns auf UX/UI, Conversion und Barrierefreiheit",
         },
       ],
       img: (
@@ -32,14 +32,20 @@ const Process = () => {
     },
     {
       id: 2,
-      title: "Developing",
+      title: "Entwicklung",
       items: [
         {
           id: 1,
-          text: "Converting design mockups with HTML/CSS and Javascript",
+          text: "Umsetzung von Design-Mockups mit HTML/CSS und Javascript",
         },
-        { id: 2, text: "Developing static sites with the latest technologies" },
-        { id: 3, text: "Usage of known CMS (WordPress, Contentful, GraphCMS)" },
+        {
+          id: 2,
+          text: "Entwicklung von statischen Websites mit den neuesten Technologien",
+        },
+        {
+          id: 3,
+          text: "Verwendung eines bekannten CMS (WordPress, Contentful, GraphCMS)",
+        },
       ],
       img: (
         <img
@@ -51,13 +57,13 @@ const Process = () => {
     },
     {
       id: 3,
-      title: "HOSTING & OPTIMASATION",
+      title: "HOSTING & OPTIMIERUNG",
       items: [
-        { id: 1, text: "Testing accessibility and reviewing the design" },
-        { id: 2, text: "Launching and promoting your website" },
+        { id: 1, text: "Testen der Zugänglichkeit und Überprüfen des Designs" },
+        { id: 2, text: "Veröffentlichung und Bewerbung Ihrer Website" },
         {
           id: 3,
-          text: "Increasing the traffic on your webpage and optimize your conversions",
+          text: "den Traffic auf Ihrer Webseite erhöhen und Ihre Konversionen optimieren",
         },
       ],
       img: (
@@ -73,11 +79,11 @@ const Process = () => {
     <section id="process" aria-label="process" className="section">
       <Container>
         <h2 className="text-primary fw-bold text-uppercase">
-          THE HEAVY LIFTING
+          DIE SCHWIERIGEN AUFGABEN
         </h2>
         <p className="text-dark">
-          The process from building and hosting a website from scratch is
-          difficult and time comsuming. That’s where we come in.
+          Der Prozess der Erstellung und des Hostings einer Website von Grund
+          auf ist schwierig und zeitaufwendig. Da kommen wir ins Spiel.
         </p>
         {processArray.map((process) => {
           const { id, title, items, img } = process;

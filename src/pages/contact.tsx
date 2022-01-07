@@ -73,11 +73,11 @@ const ContactPage = () => {
           <Row className="align-items-center">
             <Col lg={6} className="">
               <h1 className="text-uppercase text-primary fw-bold mt-3">
-                Get in Touch!
+                Melden Sie sich bei uns!
               </h1>
               <h2 className="lead text-dark mb-5">
-                Fell free to contact us and we will get back to you as soon as
-                possible!
+                Nehmen Sie Kontakt mit uns auf und wir werden uns so schnell wie
+                möglich bei Ihnen melden!
               </h2>
 
               <Row>
@@ -87,7 +87,7 @@ const ContactPage = () => {
                       <FloatingLabel
                         className="mb-4"
                         controlId="floatingFirstName"
-                        label="First Name"
+                        label="Vorname"
                       >
                         <Form.Control
                           {...register("firstName", {
@@ -96,12 +96,12 @@ const ContactPage = () => {
                           })}
                           required
                           type="text"
-                          placeholder="First Name"
+                          placeholder="Vorname"
                           isInvalid={!!errors.firstName}
                         />
 
                         <Form.Control.Feedback type="invalid">
-                          Please provide your first name
+                          Bitte geben Sie Ihren Vornamen an
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
@@ -109,7 +109,7 @@ const ContactPage = () => {
                       <FloatingLabel
                         className="mb-4"
                         controlId="floatingLastName"
-                        label="Last Name"
+                        label="Nachname"
                       >
                         <Form.Control
                           {...register("lastName", {
@@ -119,17 +119,17 @@ const ContactPage = () => {
                           isInvalid={!!errors.lastName}
                           required
                           type="text"
-                          placeholder="Last Name"
+                          placeholder="s"
                         />
                         <Form.Control.Feedback type="invalid">
-                          Please provide your last name
+                          Bitte geben Sie Ihren Nachnamen an
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
                     <Col lg={12} className="mx-auto">
                       <FloatingLabel
                         controlId="floatingEmail"
-                        label="E-Mail Address"
+                        label="E-Mail Adresse"
                         className="mb-4"
                       >
                         <Form.Control
@@ -143,7 +143,7 @@ const ContactPage = () => {
                           isInvalid={!!errors.email}
                         />
                         <Form.Control.Feedback type="invalid">
-                          Please provide your e-mail address
+                          Bitte geben Sie Ihre E-Mail Adresse an
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
@@ -151,13 +151,13 @@ const ContactPage = () => {
                     <Col lg={12} className="mx-auto">
                       <FloatingLabel
                         controlId="floatingTextarea"
-                        label="Message"
+                        label="Nachricht"
                         className="mb-4"
                       >
                         <Form.Control
                           required
                           as="textarea"
-                          placeholder="Message"
+                          placeholder="Nachricht"
                           style={{ height: "150px" }}
                           {...register("message", {
                             required: true,
@@ -165,7 +165,7 @@ const ContactPage = () => {
                           isInvalid={!!errors.message}
                         />
                         <Form.Control.Feedback type="invalid">
-                          Please provide a message
+                          Bitte geben Sie Ihre Nachricht an
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
@@ -177,7 +177,7 @@ const ContactPage = () => {
                         position="bottom-center"
                       >
                         <Toast bg="success" className="text-white" show={alert}>
-                          <Toast.Body>Thank you for your message 🥰</Toast.Body>
+                          <Toast.Body>Danke für deine Nachricht 🥰</Toast.Body>
                         </Toast>
                       </ToastContainer>
                       <Button
@@ -186,15 +186,15 @@ const ContactPage = () => {
                         variant="primary"
                         className="mt-3 mb-4"
                       >
-                        Submit
+                        Senden
                       </Button>
                     </Col>
                   </Row>
                 </Form>
 
                 <p className="fst-italic">
-                  Already interested?
-                  <Link to="/work">Click here to get started!</Link>
+                  Schon interessiert?{" "}
+                  <Link to="/work">Klicken Sie hier, um loszulegen!</Link>
                 </p>
               </Row>
             </Col>
@@ -222,11 +222,11 @@ const ContactPage = () => {
       />
       <Container id="contact">
         <h1 className="text-uppercase text-primary fw-bold mt-3">
-          Get in Touch!
+          Melden Sie sich bei uns!
         </h1>
         <h2 className="lead text-dark mb-4">
-          Fell free to contact us and we will get back to you as soon as
-          possible!
+          Nehmen Sie Kontakt mit uns auf und wir werden uns so schnell wie
+          möglich bei Ihnen melden!
         </h2>
         <Row>
           <Form noValidate onSubmit={handleSubmit(onSubmit)}>
@@ -235,7 +235,7 @@ const ContactPage = () => {
                 <FloatingLabel
                   className="mb-4"
                   controlId="floatingFirstName"
-                  label="First Name"
+                  label="Vorname"
                 >
                   <Form.Control
                     {...register("firstName", {
@@ -244,12 +244,12 @@ const ContactPage = () => {
                     })}
                     required
                     type="text"
-                    placeholder="First Name"
+                    placeholder="Vorname"
                     isInvalid={!!errors.firstName}
                   />
 
                   <Form.Control.Feedback type="invalid">
-                    Please provide your first name
+                    Bitte geben Sie Ihren Vornamen an
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
@@ -257,7 +257,7 @@ const ContactPage = () => {
                 <FloatingLabel
                   className="mb-4"
                   controlId="floatingLastName"
-                  label="Last Name"
+                  label="Nachname"
                 >
                   <Form.Control
                     {...register("lastName", {
@@ -267,17 +267,17 @@ const ContactPage = () => {
                     isInvalid={!!errors.lastName}
                     required
                     type="text"
-                    placeholder="Last Name"
+                    placeholder="s"
                   />
                   <Form.Control.Feedback type="invalid">
-                    Please provide your last name
+                    Bitte geben Sie Ihren Nachnamen an
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
               <Col lg={12} className="mx-auto">
                 <FloatingLabel
                   controlId="floatingEmail"
-                  label="E-Mail Address"
+                  label="E-Mail Adresse"
                   className="mb-4"
                 >
                   <Form.Control
@@ -291,7 +291,7 @@ const ContactPage = () => {
                     isInvalid={!!errors.email}
                   />
                   <Form.Control.Feedback type="invalid">
-                    Please provide your e-mail address
+                    Bitte geben Sie Ihre E-Mail Adresse an
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
@@ -299,13 +299,13 @@ const ContactPage = () => {
               <Col lg={12} className="mx-auto">
                 <FloatingLabel
                   controlId="floatingTextarea"
-                  label="Message"
+                  label="Nachricht"
                   className="mb-4"
                 >
                   <Form.Control
                     required
                     as="textarea"
-                    placeholder="Message"
+                    placeholder="Nachricht"
                     style={{ height: "150px" }}
                     {...register("message", {
                       required: true,
@@ -313,7 +313,7 @@ const ContactPage = () => {
                     isInvalid={!!errors.message}
                   />
                   <Form.Control.Feedback type="invalid">
-                    Please provide a message
+                    Bitte geben Sie Ihre Nachricht an
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
@@ -325,7 +325,7 @@ const ContactPage = () => {
                   position="bottom-center"
                 >
                   <Toast bg="success" className="text-white" show={alert}>
-                    <Toast.Body>Thank you for your message 🥰</Toast.Body>
+                    <Toast.Body>Danke für deine Nachricht 🥰</Toast.Body>
                   </Toast>
                 </ToastContainer>
                 <Button
@@ -334,15 +334,15 @@ const ContactPage = () => {
                   variant="primary"
                   className="mt-3 mb-4"
                 >
-                  Submit
+                  Senden
                 </Button>
               </Col>
             </Row>
           </Form>
 
           <p className="fst-italic">
-            Already interested?
-            <Link to="/work">Click here to get started!</Link>
+            Schon interessiert?{" "}
+            <Link to="/work">Klicken Sie hier, um loszulegen!</Link>
           </p>
         </Row>
       </Container>

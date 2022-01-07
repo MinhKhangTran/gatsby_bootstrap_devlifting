@@ -9,15 +9,15 @@ const CTA = () => {
         <Row className="align-items-center px-xl-5">
           <Col lg={8}>
             <h2 className="text-primary text-uppercase fw-bold">
-              ready to dive in?
+              Sind Sie Bereit?
             </h2>
             <h3 className="text-secondary text-uppercase fw-bold">
-              Start your journey now!
+              Starten sie ihre Reise jetzt!
             </h3>
           </Col>
           <Col lg={4}>
             <Link to="/work" className="btn btn-primary btn-lg mt-4 mt-lg-0">
-              GET STARTED!
+              LOSLEGEN!
             </Link>
           </Col>
         </Row>

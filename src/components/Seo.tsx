@@ -2,8 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next";
-
 function SEO({
   description,
   lang = "de",
@@ -34,23 +32,20 @@ function SEO({
       }
     `
   );
-  const { t } = useTranslation();
-  const { language } = useI18next();
 
-  const metaDescription =
-    description || t(`${site?.siteMetadata?.description}`);
+  const metaDescription = description || site?.siteMetadata?.description;
   const image =
     metaImage && metaImage.src
       ? `${site.siteMetadata.siteUrl}${metaImage.src}`
       : null;
-  const titleTemp = t(`${site?.siteMetadata?.title}`);
+  const titleTemp = site?.siteMetadata?.title;
   const canonical = pathname
     ? `${site?.siteMetadata?.siteUrl}${pathname}`
     : null;
   return (
     <Helmet
       htmlAttributes={{
-        lang: language,
+        lang,
       }}
       title={title}
       titleTemplate={`%s | ${titleTemp}`}

@@ -24,28 +24,25 @@ const Navigation = () => {
         ></Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav" data-cy="nav_collapse">
           <Nav className="me-auto align-lg-items-center">
-            <Link to="/#hero" className="nav-link">
-              Home
-            </Link>
             <Link to="/#features" className="nav-link">
-              Benefits
+              Vorteile
             </Link>
             <Link to="/#process" className="nav-link">
-              Process
+              Prozess
             </Link>
             <Link to="/#faq" className="nav-link">
               FAQ
             </Link>
 
             <Link className="nav-link" to="/about">
-              About
+              Über uns
             </Link>
             <Link className="nav-link" to="/blog">
               Blog
             </Link>
           </Nav>
           <Link className="btn btn-outline-primary" to="/contact">
-            Contact
+            Kontakt
           </Link>
         </Navbar.Collapse>
       </Container>

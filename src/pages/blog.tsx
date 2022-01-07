@@ -40,11 +40,11 @@ const BlogPage = ({ data }: { data: BlogAndLangQuery }) => {
       <SEO title="Blog" description="A curated list of all my blog posts" />
       <Container id="blog">
         <h1 className="text-uppercase text-primary fw-bold mt-3">
-          From the Blog
+          Aus dem Blog
         </h1>
         <p className="lead text-dark">
-          This posts should help beginners or curious people to understand the
-          big world of web development.
+          Diese Beiträge sollen Anfängern oder Neugierigen helfen, die große
+          Welt der Webentwicklung zu verstehen.
         </p>
         <Row className="my-5 mx-0 gap-5">
           {data.allContentfulBlog.nodes.map((post) => {
