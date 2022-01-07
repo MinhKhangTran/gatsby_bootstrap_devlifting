@@ -1,7 +1,6 @@
 import { graphql, Link } from "gatsby";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Trans, useTranslation } from "react-i18next";
 import Layout from "../components/Layout";
 import SEO from "../components/Seo";
 import construction from "../images/construction.svg";
@@ -33,26 +32,19 @@ const options = {
 };
 
 const BlogPage = ({ data }: { data: BlogAndLangQuery }) => {
-  const { t } = useTranslation();
-
   const richtext = data.allContentfulBlog.nodes[0]
     .richtext as RenderRichTextData<ContentfulRichTextGatsbyReference>;
 
   return (
     <Layout>
-      <SEO
-        title={t("Blog")}
-        description={t("A curated list of all my blog posts")}
-      />
+      <SEO title="Blog" description="A curated list of all my blog posts" />
       <Container id="blog">
         <h1 className="text-uppercase text-primary fw-bold mt-3">
-          <Trans>From the Blog</Trans>
+          From the Blog
         </h1>
         <p className="lead text-dark">
-          <Trans>
-            This posts should help beginners or curious people to understand the
-            big world of web development.
-          </Trans>
+          This posts should help beginners or curious people to understand the
+          big world of web development.
         </p>
         <Row className="my-5 mx-0 gap-5">
           {data.allContentfulBlog.nodes.map((post) => {
@@ -94,7 +86,7 @@ const BlogPage = ({ data }: { data: BlogAndLangQuery }) => {
 export default BlogPage;
 
 export const BlogAndLang = graphql`
-  query BlogAndLang($language: String!) {
+  {
     allContentfulBlog(sort: { order: DESC, fields: date }) {
       nodes {
         date(locale: "DD MM YYYY")
@@ -121,16 +113,6 @@ export const BlogAndLang = graphql`
               __typename
             }
           }
-        }
-      }
-    }
-
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
         }
       }
     }

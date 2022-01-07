@@ -2,7 +2,6 @@ import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Trans, useTranslation } from "react-i18next";
 import { FaTwitter } from "react-icons/fa";
 import CTA from "../components/CTA";
 import Layout from "../components/Layout";
@@ -10,7 +9,6 @@ import SEO from "../components/Seo";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 
 const AboutPage = () => {
-  const { t } = useTranslation();
   let isPageWide = useMediaQuery("(min-width: 992px)");
 
   const emailAddress = "devlifting@gmail.com";
@@ -20,57 +18,48 @@ const AboutPage = () => {
     return (
       <Layout>
         <SEO
-          title={t("About")}
-          description={t("Learn more about DevLifting and the goals here")}
+          title="About"
+          description="Learn more about DevLifting and the goals here"
         />
         <Container id="about" className="my-4">
           <Row className="">
             <Col lg={6}>
               <h1 className="text-uppercase text-primary fw-bold mt-3">
-                <Trans>ABOUT DEVLIFTING</Trans>
+                ABOUT DEVLIFTING
               </h1>
-              <p className="lead text-dark">
-                <Trans>{about_text}</Trans>
-              </p>
+              <p className="lead text-dark">{about_text}</p>
               <h2 className="text-uppercase text-primary fw-bold mt-3">
-                <Trans>The goals</Trans>
+                The goals
               </h2>
               <p className="lead text-dark">
-                <Trans>
-                  The main goal of DevLifting is to create custom and accessible
-                  websites. On of our main attention is accessiblity. Websites
-                  should be accessible for everyone by default. For example
-                  people with low vision or blind people should access all
-                  websites. The website should then be still function normally
-                  with screen readers or other assistive technologies. There
-                  will always be some accessibility issues, but we try our best
-                  to deliver a good experience for everyone who visits our
-                  pages.
-                </Trans>
+                The main goal of DevLifting is to create custom and accessible
+                websites. On of our main attention is accessiblity. Websites
+                should be accessible for everyone by default. For example people
+                with low vision or blind people should access all websites. The
+                website should then be still function normally with screen
+                readers or other assistive technologies. There will always be
+                some accessibility issues, but we try our best to deliver a good
+                experience for everyone who visits our pages.
               </p>
               <p className="lead text-dark">
-                <Trans>
-                  We use the latest technology to provide secure and fast
-                  websites. Combined with CMS (Content Managment Systems) the
-                  customer can adapt the website agil.
-                </Trans>
+                We use the latest technology to provide secure and fast
+                websites. Combined with CMS (Content Managment Systems) the
+                customer can adapt the website agil.
               </p>
               <p className="lead text-dark">
-                <Trans>
-                  The cherry on the cake is a website with high ranking position
-                  on search engines like google and bing. This will draw traffic
-                  to the page. With the help of UX (User experience) and with
-                  copywriting the page is ready for conversions.
-                </Trans>
+                The cherry on the cake is a website with high ranking position
+                on search engines like google and bing. This will draw traffic
+                to the page. With the help of UX (User experience) and with
+                copywriting the page is ready for conversions.
               </p>
 
               <div className="about_socials mt-5">
                 <h2 className="text-uppercase text-primary fw-bold mt-3">
-                  <Trans>Contact</Trans>
+                  Contact
                 </h2>
                 <p className="lead text-dark">{emailAddress}</p>
                 <h2 className="text-uppercase text-primary fw-bold mt-3">
-                  <Trans>Follow me!</Trans>
+                  Follow me!
                 </h2>
                 <a
                   href="https://twitter.com/devLifting_"
@@ -101,8 +90,8 @@ const AboutPage = () => {
   return (
     <Layout>
       <SEO
-        title={t("About")}
-        description={t("Learn more about DevLifting and the goals here")}
+        title="About"
+        description="Learn more about DevLifting and the goals here"
       />
       <Container id="about" className="my-4">
         <Row className="flex-lg-row-reverse">
@@ -120,52 +109,43 @@ const AboutPage = () => {
             <Row>
               <Col md={9}>
                 <h1 className="text-uppercase text-primary fw-bold mt-3">
-                  <Trans>ABOUT DEVLIFTING</Trans>
+                  ABOUT DEVLIFTING
                 </h1>
-                <p className="lead text-dark">
-                  <Trans>{about_text}</Trans>
-                </p>
+                <p className="lead text-dark">{about_text}</p>
                 <h2 className="text-uppercase text-primary fw-bold mt-3">
-                  <Trans>The goals</Trans>
+                  The goals
                 </h2>
                 <p className="lead text-dark">
-                  <Trans>
-                    The main goal of DevLifting is to create custom and
-                    accessible websites. On of our main attention is
-                    accessiblity. Websites should be accessible for everyone by
-                    default. For example people with low vision or blind people
-                    should access all websites. The website should then be still
-                    function normally with screen readers or other assistive
-                    technologies. There will always be some accessibility
-                    issues, but we try our best to deliver a good experience for
-                    everyone who visits our pages.
-                  </Trans>
+                  The main goal of DevLifting is to create custom and accessible
+                  websites. On of our main attention is accessiblity. Websites
+                  should be accessible for everyone by default. For example
+                  people with low vision or blind people should access all
+                  websites. The website should then be still function normally
+                  with screen readers or other assistive technologies. There
+                  will always be some accessibility issues, but we try our best
+                  to deliver a good experience for everyone who visits our
+                  pages.
                 </p>
                 <p className="lead text-dark">
-                  <Trans>
-                    We use the latest technology to provide secure and fast
-                    websites. Combined with CMS (Content Managment Systems) you
-                    can adapt the website agil.
-                  </Trans>
+                  We use the latest technology to provide secure and fast
+                  websites. Combined with CMS (Content Managment Systems) you
+                  can adapt the website agil.
                 </p>
                 <p className="lead text-dark">
-                  <Trans>
-                    The cherry on the cake is a website with high ranking
-                    position on search engines like google and bing. This will
-                    draw traffic to the page. With the help of UX (User
-                    experience) and with copywriting the page is ready for
-                    conversions.
-                  </Trans>
+                  The cherry on the cake is a website with high ranking position
+                  on search engines like google and bing. This will draw traffic
+                  to the page. With the help of UX (User experience) and with
+                  copywriting the page is ready for conversions.
                 </p>
               </Col>
               <Col md={3}>
                 <div className="about_socials mt-5 mt-md-0">
                   <h2 className="text-uppercase text-primary fw-bold mt-3">
-                    <Trans>Contact</Trans>
+                    Contact
                   </h2>
                   <p className="lead text-dark">{emailAddress}</p>
                   <h2 className="text-uppercase text-primary fw-bold mt-3">
-                    <Trans>Follow me!</Trans>
+                    Follow me!
                   </h2>
                   <a
                     href="https://twitter.com/devLifting_"
@@ -187,17 +167,3 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-
-export const query = graphql`
-  query LangAbout($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`;

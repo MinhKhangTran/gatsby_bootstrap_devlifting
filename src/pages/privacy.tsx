@@ -522,17 +522,3 @@ const PrivacyPage = () => {
 };
 
 export default PrivacyPage;
-
-export const query = graphql`
-  query LangPrivacy($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`;

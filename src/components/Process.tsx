@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Trans } from "react-i18next";
+
 import { FaCheck } from "react-icons/fa";
 import process_1 from "../images/process_1.svg";
 import process_2 from "../images/process_2.svg";
@@ -73,13 +73,11 @@ const Process = () => {
     <section id="process" aria-label="process" className="section">
       <Container>
         <h2 className="text-primary fw-bold text-uppercase">
-          <Trans>THE HEAVY LIFTING</Trans>
+          THE HEAVY LIFTING
         </h2>
         <p className="text-dark">
-          <Trans>
-            The process from building and hosting a website from scratch is
-            difficult and time comsuming. That’s where we come in.
-          </Trans>
+          The process from building and hosting a website from scratch is
+          difficult and time comsuming. That’s where we come in.
         </p>
         {processArray.map((process) => {
           const { id, title, items, img } = process;
@@ -89,16 +87,14 @@ const Process = () => {
                 <div className="process_text text-dark position-relative">
                   <span className="position-absolute">{id}</span>
                   <h3 className="text-primary text-uppercase fw-bold mb-2">
-                    <Trans>{title}</Trans>
+                    {title}
                   </h3>
                   {items.map((item) => {
                     const { id, text } = item;
                     return (
                       <ul className="list-unstyled" key={id}>
                         <li className="d-flex align-items-center gap-2">
-                          
-                            <FaCheck className="text-secondary" /> <Trans>{text}
-                          </Trans>
+                          <FaCheck className="text-secondary" /> {text}
                         </li>
                       </ul>
                     );

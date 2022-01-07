@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Trans } from "react-i18next";
+
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import logo from "../images/logo.svg";
 import logo_big from "../images/logo_big.svg";
@@ -25,27 +25,27 @@ const Navigation = () => {
         <Navbar.Collapse id="basic-navbar-nav" data-cy="nav_collapse">
           <Nav className="me-auto align-lg-items-center">
             <Link to="/#hero" className="nav-link">
-              <Trans>Home</Trans>
+              Home
             </Link>
             <Link to="/#features" className="nav-link">
-              <Trans>Benefits</Trans>
+              Benefits
             </Link>
             <Link to="/#process" className="nav-link">
-              <Trans>Process</Trans>
+              Process
             </Link>
             <Link to="/#faq" className="nav-link">
-              <Trans>FAQ</Trans>
+              FAQ
             </Link>
 
             <Link className="nav-link" to="/about">
-              <Trans>About</Trans>
+              About
             </Link>
             <Link className="nav-link" to="/blog">
-              <Trans>Blog</Trans>
+              Blog
             </Link>
           </Nav>
           <Link className="btn btn-outline-primary" to="/contact">
-            <Trans>Contact</Trans>
+            Contact
           </Link>
         </Navbar.Collapse>
       </Container>

@@ -8,22 +8,14 @@ import lost from "../images/lost.svg";
 
 // markup
 const NotFoundPage = () => {
-  const { t } = useTranslation();
   return (
     <Layout>
-      <SEO title={t("404")} />
+      <SEO title="404" />
       <Container>
         <main>
-          <h1>
-            <Trans>Page not found</Trans>
-          </h1>
-          <p>
-            <Trans>Sorry we couldn’t find what you were looking for.</Trans>
-          </p>
-          <Link to="/">
-            <Trans>Go home</Trans>
-          </Link>
-          .
+          <h1>Page not found</h1>
+          <p>Sorry we couldn’t find what you were looking for.</p>
+          <Link to="/">Go home</Link>.
           <article className="d-flex justify-content-center align-items-center">
             <img
               src={lost}
@@ -38,17 +30,3 @@ const NotFoundPage = () => {
 };
 
 export default NotFoundPage;
-
-export const query = graphql`
-  query Lang404($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`;

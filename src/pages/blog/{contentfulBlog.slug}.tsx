@@ -70,7 +70,7 @@ const SingleBlogPost = ({ data }: { data: SingleBlogpostQuery }) => {
 export default SingleBlogPost;
 
 export const SingleBlogPostQuery = graphql`
-  query SingleBlogpost($slug: String!, $language: String!) {
+  query SingleBlogpost($slug: String!) {
     contentfulBlog(slug: { eq: $slug }) {
       title
       date(locale: "DD MM YYYY")
@@ -88,15 +88,6 @@ export const SingleBlogPostQuery = graphql`
             gatsbyImageData(placeholder: TRACED_SVG)
             __typename
           }
-        }
-      }
-    }
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
         }
       }
     }

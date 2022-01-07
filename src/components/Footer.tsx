@@ -1,14 +1,12 @@
 import { Link } from "gatsby";
-import { useI18next, Link as IntLink } from "gatsby-plugin-react-i18next";
+
 import React from "react";
 import { Col, Container, Dropdown, Row } from "react-bootstrap";
-import { Trans } from "react-i18next";
+
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import logo_big from "../images/logo_big.svg";
 
 const Footer = () => {
-  const { languages, originalPath, language } = useI18next();
-
   return (
     <footer role="contentinfo" id="footer" className="bg-secondary py-4">
       {/* <p className="back-to-top text-center mb-0">
@@ -31,7 +29,7 @@ const Footer = () => {
               <img src={logo_big} alt="logo of devlifting" height="60" />
             </Link>
             <p className=" my-2">
-              <Trans>Our heavy lifting will improve your web presence!</Trans>
+              Our heavy lifting will improve your web presence!
             </p>
 
             <div className="footer_socials d-flex gap-3 text-dark">
@@ -60,17 +58,17 @@ const Footer = () => {
 
           <Col lg={8} className="mt-4">
             <Row>
-              <Col md={3} xs={6}>
+              <Col md={4} xs={6}>
                 <h3>Home</h3>
                 <ul className="list-unstyled">
                   <li>
                     <Link to="/#features" className="footer_links">
-                      <Trans>Benefits</Trans>
+                      Benefits
                     </Link>
                   </li>
                   <li>
                     <Link to="/#process" className="footer_links">
-                      <Trans>Process</Trans>
+                      Process
                     </Link>
                   </li>
                   <li>
@@ -80,32 +78,28 @@ const Footer = () => {
                   </li>
                 </ul>
               </Col>
-              <Col md={3} xs={6}>
-                <h3>
-                  <Trans>Company</Trans>
-                </h3>
+              <Col md={4} xs={6}>
+                <h3>Company</h3>
                 <ul className="list-unstyled">
                   <li>
                     <Link className="footer_links" to="/about">
-                      <Trans>About</Trans>
+                      About
                     </Link>
                   </li>
                   <li>
                     <Link className="footer_links" to="/blog">
-                      <Trans>Blog</Trans>
+                      Blog
                     </Link>
                   </li>
                   <li>
                     <Link className="footer_links" to="/contact">
-                      <Trans>Contact</Trans>
+                      Contact
                     </Link>
                   </li>
                 </ul>
               </Col>
-              <Col md={3} xs={6}>
-                <h3>
-                  <Trans>Legal</Trans>
-                </h3>
+              <Col md={4} xs={6}>
+                <h3>Legal</h3>
                 <ul className="list-unstyled">
                   <li>
                     <Link className="footer_links" to="/privacy">
@@ -119,7 +113,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </Col>
-              <Col md={3} xs={6}>
+              {/* <Col md={3} xs={6}>
                 <Dropdown>
                   <Dropdown.Toggle variant="dark" id="dropdown-language">
                     {language === "en" ? "🇺🇸 Englisch" : "🇩🇪 German"}
@@ -142,12 +136,11 @@ const Footer = () => {
                     ))}
                   </Dropdown.Menu>
                 </Dropdown>
-              </Col>
+              </Col> */}
             </Row>
           </Col>
           <p className="text-center pt-3 mt-4 mb-0 copyright">
-            &copy; {new Date().getFullYear()}, DevLifting.{" "}
-            <Trans>All rights reserved</Trans>
+            &copy; {new Date().getFullYear()}, DevLifting. All rights reserved
           </p>
         </Row>
       </Container>

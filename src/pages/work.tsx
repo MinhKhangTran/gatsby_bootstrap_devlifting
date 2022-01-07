@@ -17,7 +17,6 @@ import {
 import { SubmitHandler, useForm } from "react-hook-form";
 import { graphql, Link } from "gatsby";
 import axios from "axios";
-import { Trans, useTranslation } from "react-i18next";
 
 interface IFormInputs {
   firstName: string;
@@ -29,7 +28,6 @@ interface IFormInputs {
 }
 
 const WorkPage = () => {
-  const { t } = useTranslation();
   let isPageWide = useMediaQuery("(min-width: 992px)");
   const [alert, setAlert] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -67,22 +65,18 @@ const WorkPage = () => {
     return (
       <Layout>
         <SEO
-          title={t("Let's work together")}
-          description={t(
-            "Just fill this form and we will connect to you as soon as possible"
-          )}
+          title="Let's work together"
+          description="Just fill this form and we will connect to you as soon as possible"
         />
         <Container id="work" className="my-4">
           <Row className="align-items-center">
             <Col lg={6} className="">
               <h1 className="text-uppercase text-primary fw-bold mt-3">
-                <Trans>Let's work together</Trans>
+                Let's work together
               </h1>
               <h2 className="lead text-dark mb-5">
-                <Trans>
-                  We would love to hear from you. Just fill this form and we
-                  will connect to you as soon as possible
-                </Trans>
+                We would love to hear from you. Just fill this form and we will
+                connect to you as soon as possible
               </h2>
               <Row>
                 <Form noValidate onSubmit={handleSubmit(onSubmit)}>
@@ -91,7 +85,7 @@ const WorkPage = () => {
                       <FloatingLabel
                         className="mb-4"
                         controlId="floatingFirstName"
-                        label={t("First Name")}
+                        label="First Name"
                       >
                         <Form.Control
                           {...register("firstName", {
@@ -100,12 +94,12 @@ const WorkPage = () => {
                           })}
                           required
                           type="text"
-                          placeholder={t("First Name")}
+                          placeholder="First Name"
                           isInvalid={!!errors.firstName}
                         />
 
                         <Form.Control.Feedback type="invalid">
-                          <Trans>Please provide your first name</Trans>
+                          Please provide your first name
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
@@ -113,7 +107,7 @@ const WorkPage = () => {
                       <FloatingLabel
                         className="mb-4"
                         controlId="floatingLastName"
-                        label={t("Last Name")}
+                        label="Last Name"
                       >
                         <Form.Control
                           {...register("lastName", {
@@ -123,17 +117,17 @@ const WorkPage = () => {
                           isInvalid={!!errors.lastName}
                           required
                           type="text"
-                          placeholder={t("Last Name")}
+                          placeholder="Last Name"
                         />
                         <Form.Control.Feedback type="invalid">
-                          <Trans>Please provide your last name</Trans>
+                          Please provide your last name
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
                     <Col lg={12} className="mx-auto">
                       <FloatingLabel
                         controlId="floatingEmail"
-                        label={t("E-Mail Address")}
+                        label="E-Mail Address"
                         className="mb-4"
                       >
                         <Form.Control
@@ -147,60 +141,60 @@ const WorkPage = () => {
                           isInvalid={!!errors.email}
                         />
                         <Form.Control.Feedback type="invalid">
-                          <Trans>Please provide your e-mail address</Trans>
+                          Please provide your e-mail address
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
                     <Col lg={12} className="mx-auto">
                       <FloatingLabel
                         controlId="floatingCompany"
-                        label={t("Company")}
+                        label="Company"
                         className="mb-4"
                       >
                         <Form.Control
                           required
                           type="text"
-                          placeholder={t("Company")}
+                          placeholder="Company"
                           {...register("company", {
                             required: true,
                           })}
                           isInvalid={!!errors.message}
                         />
                         <Form.Control.Feedback type="invalid">
-                          <Trans>Please provide your company</Trans>
+                          Please provide your company
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
                     <Col lg={12} className="mx-auto">
                       <FloatingLabel
                         controlId="floatingBudget"
-                        label={t("Expected Budget")}
+                        label="Expected Budget"
                         className="mb-4"
                       >
                         <Form.Control
                           required
                           type="text"
-                          placeholder={t("Expected Budget")}
+                          placeholder="Expected Budget"
                           {...register("budget", {
                             required: true,
                           })}
                           isInvalid={!!errors.message}
                         />
                         <Form.Control.Feedback type="invalid">
-                          <Trans>Please provide your budget</Trans>
+                          Please provide your budget
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
                     <Col lg={12} className="mx-auto">
                       <FloatingLabel
                         controlId="floatingTextarea"
-                        label={t("How can we help you?")}
+                        label="How can we help you?"
                         className="mb-4"
                       >
                         <Form.Control
                           required
                           as="textarea"
-                          placeholder={t("How can we help you?")}
+                          placeholder="How can we help you?"
                           style={{ height: "150px" }}
                           {...register("message", {
                             required: true,
@@ -208,7 +202,7 @@ const WorkPage = () => {
                           isInvalid={!!errors.message}
                         />
                         <Form.Control.Feedback type="invalid">
-                          <Trans>Please provide your message</Trans>
+                          Please provide your message
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
@@ -220,9 +214,7 @@ const WorkPage = () => {
                         position="bottom-center"
                       >
                         <Toast bg="success" className="text-white" show={alert}>
-                          <Toast.Body>
-                            <Trans>Thank you for your message 🥰</Trans>
-                          </Toast.Body>
+                          <Toast.Body>Thank you for your message 🥰</Toast.Body>
                         </Toast>
                       </ToastContainer>
                       <Button
@@ -231,17 +223,15 @@ const WorkPage = () => {
                         variant="primary"
                         className="mt-3 mb-4"
                       >
-                        <Trans>Submit</Trans>
+                        Submit
                       </Button>
                     </Col>
                   </Row>
                 </Form>
 
                 <p className="fst-italic">
-                  <Trans i18nKey="work_text">
-                    Just want to say “Hello”?
-                    <Link to="/contact">Click here to contact us</Link>
-                  </Trans>
+                  Just want to say “Hello”?
+                  <Link to="/contact">Click here to contact us</Link>
                 </p>
               </Row>
             </Col>
@@ -259,10 +249,8 @@ const WorkPage = () => {
   return (
     <Layout>
       <SEO
-        title={t("Let's work together")}
-        description={t(
-          "Just fill this form and we will connect to you as soon as possible"
-        )}
+        title="Let's work together"
+        description="Just fill this form and we will connect to you as soon as possible"
       />
       <StaticImage
         src="../images/work_sm.jpg"
@@ -271,13 +259,11 @@ const WorkPage = () => {
       />
       <Container id="work">
         <h1 className="text-uppercase text-primary fw-bold mt-3">
-          <Trans>Let's work together</Trans>
+          Let's work together
         </h1>
         <h2 className="lead text-dark mb-4">
-          <Trans>
-            We would love to hear from you. Just fill this form and we will
-            connect to you as soon as possible
-          </Trans>
+          We would love to hear from you. Just fill this form and we will
+          connect to you as soon as possible
         </h2>
         <Row>
           <Form noValidate onSubmit={handleSubmit(onSubmit)}>
@@ -286,7 +272,7 @@ const WorkPage = () => {
                 <FloatingLabel
                   className="mb-4"
                   controlId="floatingFirstName"
-                  label={t("First Name")}
+                  label="First Name"
                 >
                   <Form.Control
                     {...register("firstName", {
@@ -295,12 +281,12 @@ const WorkPage = () => {
                     })}
                     required
                     type="text"
-                    placeholder={t("First Name")}
+                    placeholder="First Name"
                     isInvalid={!!errors.firstName}
                   />
 
                   <Form.Control.Feedback type="invalid">
-                    <Trans>Please provide your first name</Trans>
+                    Please provide your first name
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
@@ -308,7 +294,7 @@ const WorkPage = () => {
                 <FloatingLabel
                   className="mb-4"
                   controlId="floatingLastName"
-                  label={t("Last Name")}
+                  label="Last Name"
                 >
                   <Form.Control
                     {...register("lastName", {
@@ -318,17 +304,17 @@ const WorkPage = () => {
                     isInvalid={!!errors.lastName}
                     required
                     type="text"
-                    placeholder={t("Last Name")}
+                    placeholder="Last Name"
                   />
                   <Form.Control.Feedback type="invalid">
-                    <Trans>Please provide your last name</Trans>
+                    Please provide your last name
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
               <Col lg={12} className="mx-auto">
                 <FloatingLabel
                   controlId="floatingEmail"
-                  label={t("E-Mail Address")}
+                  label="E-Mail Address"
                   className="mb-4"
                 >
                   <Form.Control
@@ -342,60 +328,60 @@ const WorkPage = () => {
                     isInvalid={!!errors.email}
                   />
                   <Form.Control.Feedback type="invalid">
-                    <Trans>Please provide your e-mail address</Trans>
+                    Please provide your e-mail address
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
               <Col lg={12} className="mx-auto">
                 <FloatingLabel
                   controlId="floatingCompany"
-                  label={t("Company")}
+                  label="Company"
                   className="mb-4"
                 >
                   <Form.Control
                     required
                     type="text"
-                    placeholder={t("Company")}
+                    placeholder="Company"
                     {...register("company", {
                       required: true,
                     })}
                     isInvalid={!!errors.message}
                   />
                   <Form.Control.Feedback type="invalid">
-                    <Trans>Please provide your company</Trans>
+                    Please provide your company
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
               <Col lg={12} className="mx-auto">
                 <FloatingLabel
                   controlId="floatingBudget"
-                  label={t("Expected Budget")}
+                  label="Expected Budget"
                   className="mb-4"
                 >
                   <Form.Control
                     required
                     type="text"
-                    placeholder={t("Expected Budget")}
+                    placeholder="Expected Budget"
                     {...register("budget", {
                       required: true,
                     })}
                     isInvalid={!!errors.message}
                   />
                   <Form.Control.Feedback type="invalid">
-                    <Trans>Please provide your budget</Trans>
+                    Please provide your budget
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
               <Col lg={12} className="mx-auto">
                 <FloatingLabel
                   controlId="floatingTextarea"
-                  label={t("How can we help you?")}
+                  label="How can we help you?"
                   className="mb-4"
                 >
                   <Form.Control
                     required
                     as="textarea"
-                    placeholder={t("How can we help you?")}
+                    placeholder="How can we help you?"
                     style={{ height: "150px" }}
                     {...register("message", {
                       required: true,
@@ -403,7 +389,7 @@ const WorkPage = () => {
                     isInvalid={!!errors.message}
                   />
                   <Form.Control.Feedback type="invalid">
-                    <Trans>Please provide your message</Trans>
+                    Please provide your message
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
@@ -415,9 +401,7 @@ const WorkPage = () => {
                   position="bottom-center"
                 >
                   <Toast bg="success" className="text-white" show={alert}>
-                    <Toast.Body>
-                      <Trans>Thank you for your message 🥰</Trans>
-                    </Toast.Body>
+                    <Toast.Body>Thank you for your message 🥰</Toast.Body>
                   </Toast>
                 </ToastContainer>
                 <Button
@@ -426,17 +410,15 @@ const WorkPage = () => {
                   variant="primary"
                   className="mt-3 mb-4"
                 >
-                  <Trans>Submit</Trans>
+                  Submit
                 </Button>
               </Col>
             </Row>
           </Form>
 
           <p className="fst-italic">
-            <Trans i18nKey="work_text">
-              Just want to say “Hello”?
-              <Link to="/contact">Click here to contact us</Link>
-            </Trans>
+            Just want to say “Hello”?
+            <Link to="/contact">Click here to contact us</Link>
           </p>
         </Row>
       </Container>
@@ -445,17 +427,3 @@ const WorkPage = () => {
 };
 
 export default WorkPage;
-
-export const query = graphql`
-  query LangWork($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`;

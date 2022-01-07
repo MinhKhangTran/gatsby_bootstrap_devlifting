@@ -98,32 +98,32 @@ module.exports = {
       },
       __key: "images",
     },
-    {
-      resolve: `gatsby-plugin-react-i18next`,
-      options: {
-        localeJsonSourceName: `locale`,
-        languages: [`en`, `de`],
-        defaultLanguage: `de`,
-        siteUrl,
-        i18nextOptions: {
-          interpolation: {
-            escapeValue: false,
-          },
-          keySeparator: false,
-          nsSeparator: false,
-        },
-        pages: [
-          {
-            matchPath: "/blog/:uid",
-            getLanguageFromPath: true,
-            excludeLanguages: ["en"],
-          },
-          {
-            matchPath: "/preview",
-            languages: ["en"],
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-react-i18next`,
+    //   options: {
+    //     localeJsonSourceName: `locale`,
+    //     languages: [`en`, `de`],
+    //     defaultLanguage: `de`,
+    //     siteUrl,
+    //     i18nextOptions: {
+    //       interpolation: {
+    //         escapeValue: false,
+    //       },
+    //       keySeparator: false,
+    //       nsSeparator: false,
+    //     },
+    //     pages: [
+    //       {
+    //         matchPath: "/blog/:uid",
+    //         getLanguageFromPath: true,
+    //         excludeLanguages: ["en"],
+    //       },
+    //       {
+    //         matchPath: "/preview",
+    //         languages: ["en"],
+    //       },
+    //     ],
+    //   },
+    // },
   ],
 };
