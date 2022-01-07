@@ -65,18 +65,19 @@ const WorkPage = () => {
     return (
       <Layout>
         <SEO
-          title="Let's work together"
-          description="Just fill this form and we will connect to you as soon as possible"
+          title="Lassen Sie uns zusammenarbeiten"
+          description="Füllen Sie einfach dieses Formular aus und wir werden uns so schnell wie möglich mit Ihnen in Verbindung setzen."
         />
         <Container id="work" className="my-4">
           <Row className="align-items-center">
             <Col lg={6} className="">
               <h1 className="text-uppercase text-primary fw-bold mt-3">
-                Let's work together
+                Lassen Sie uns zusammenarbeiten
               </h1>
               <h2 className="lead text-dark mb-5">
-                We would love to hear from you. Just fill this form and we will
-                connect to you as soon as possible
+                Wir würden uns freuen, von Ihnen zu hören. Füllen Sie einfach
+                dieses Formular aus und wir werden uns so schnell wie möglich
+                mit Ihnen in Verbindung setzen
               </h2>
               <Row>
                 <Form noValidate onSubmit={handleSubmit(onSubmit)}>
@@ -85,7 +86,7 @@ const WorkPage = () => {
                       <FloatingLabel
                         className="mb-4"
                         controlId="floatingFirstName"
-                        label="First Name"
+                        label="Vorname"
                       >
                         <Form.Control
                           {...register("firstName", {
@@ -94,12 +95,12 @@ const WorkPage = () => {
                           })}
                           required
                           type="text"
-                          placeholder="First Name"
+                          placeholder="Vorname"
                           isInvalid={!!errors.firstName}
                         />
 
                         <Form.Control.Feedback type="invalid">
-                          Please provide your first name
+                          Bitte geben Sie Ihren Vornamen an
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
@@ -107,7 +108,7 @@ const WorkPage = () => {
                       <FloatingLabel
                         className="mb-4"
                         controlId="floatingLastName"
-                        label="Last Name"
+                        label="Nachname"
                       >
                         <Form.Control
                           {...register("lastName", {
@@ -117,17 +118,17 @@ const WorkPage = () => {
                           isInvalid={!!errors.lastName}
                           required
                           type="text"
-                          placeholder="Last Name"
+                          placeholder="Nachname"
                         />
                         <Form.Control.Feedback type="invalid">
-                          Please provide your last name
+                          Bitte geben Sie Ihren Nachnamen an
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
                     <Col lg={12} className="mx-auto">
                       <FloatingLabel
                         controlId="floatingEmail"
-                        label="E-Mail Address"
+                        label="E-Mail Adresse"
                         className="mb-4"
                       >
                         <Form.Control
@@ -141,60 +142,60 @@ const WorkPage = () => {
                           isInvalid={!!errors.email}
                         />
                         <Form.Control.Feedback type="invalid">
-                          Please provide your e-mail address
+                          Bitte geben Sie Ihre E-Mail Adresse an
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
                     <Col lg={12} className="mx-auto">
                       <FloatingLabel
                         controlId="floatingCompany"
-                        label="Company"
+                        label="Unternehmen"
                         className="mb-4"
                       >
                         <Form.Control
                           required
                           type="text"
-                          placeholder="Company"
+                          placeholder="Unternehmen"
                           {...register("company", {
                             required: true,
                           })}
                           isInvalid={!!errors.message}
                         />
                         <Form.Control.Feedback type="invalid">
-                          Please provide your company
+                          Bitte geben Sie Ihr Unternehmen an
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
                     <Col lg={12} className="mx-auto">
                       <FloatingLabel
                         controlId="floatingBudget"
-                        label="Expected Budget"
+                        label="Erwartetes Budget"
                         className="mb-4"
                       >
                         <Form.Control
                           required
                           type="text"
-                          placeholder="Expected Budget"
+                          placeholder="Erwartetes Budget"
                           {...register("budget", {
                             required: true,
                           })}
                           isInvalid={!!errors.message}
                         />
                         <Form.Control.Feedback type="invalid">
-                          Please provide your budget
+                          Bitte geben Sie Ihr Budget an
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
                     <Col lg={12} className="mx-auto">
                       <FloatingLabel
                         controlId="floatingTextarea"
-                        label="How can we help you?"
+                        label="Wie können wir Ihnen helfen?"
                         className="mb-4"
                       >
                         <Form.Control
                           required
                           as="textarea"
-                          placeholder="How can we help you?"
+                          placeholder="Wie können wir Ihnen helfen?"
                           style={{ height: "150px" }}
                           {...register("message", {
                             required: true,
@@ -202,7 +203,7 @@ const WorkPage = () => {
                           isInvalid={!!errors.message}
                         />
                         <Form.Control.Feedback type="invalid">
-                          Please provide your message
+                          Bitte geben Sie Ihre Nachricht an
                         </Form.Control.Feedback>
                       </FloatingLabel>
                     </Col>
@@ -214,7 +215,7 @@ const WorkPage = () => {
                         position="bottom-center"
                       >
                         <Toast bg="success" className="text-white" show={alert}>
-                          <Toast.Body>Thank you for your message 🥰</Toast.Body>
+                          <Toast.Body>Danke für Ihre Nachricht 🥰</Toast.Body>
                         </Toast>
                       </ToastContainer>
                       <Button
@@ -223,15 +224,17 @@ const WorkPage = () => {
                         variant="primary"
                         className="mt-3 mb-4"
                       >
-                        Submit
+                        Senden
                       </Button>
                     </Col>
                   </Row>
                 </Form>
 
                 <p className="fst-italic">
-                  Just want to say “Hello”?
-                  <Link to="/contact">Click here to contact us</Link>
+                  Möchten Sie nur 'Hallo' sagen?{" "}
+                  <Link to="/contact">
+                    Klicken Sie hier, um uns zu kontaktieren!
+                  </Link>
                 </p>
               </Row>
             </Col>
@@ -259,11 +262,12 @@ const WorkPage = () => {
       />
       <Container id="work">
         <h1 className="text-uppercase text-primary fw-bold mt-3">
-          Let's work together
+          Lassen Sie uns zusammenarbeiten
         </h1>
         <h2 className="lead text-dark mb-4">
-          We would love to hear from you. Just fill this form and we will
-          connect to you as soon as possible
+          Wir würden uns freuen, von Ihnen zu hören. Füllen Sie einfach dieses
+          Formular aus und wir werden uns so schnell wie möglich mit Ihnen in
+          Verbindung setzen
         </h2>
         <Row>
           <Form noValidate onSubmit={handleSubmit(onSubmit)}>
@@ -272,7 +276,7 @@ const WorkPage = () => {
                 <FloatingLabel
                   className="mb-4"
                   controlId="floatingFirstName"
-                  label="First Name"
+                  label="Vorname"
                 >
                   <Form.Control
                     {...register("firstName", {
@@ -281,12 +285,12 @@ const WorkPage = () => {
                     })}
                     required
                     type="text"
-                    placeholder="First Name"
+                    placeholder="Vorname"
                     isInvalid={!!errors.firstName}
                   />
 
                   <Form.Control.Feedback type="invalid">
-                    Please provide your first name
+                    Bitte geben Sie Ihren Vornamen an
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
@@ -294,7 +298,7 @@ const WorkPage = () => {
                 <FloatingLabel
                   className="mb-4"
                   controlId="floatingLastName"
-                  label="Last Name"
+                  label="Nachname"
                 >
                   <Form.Control
                     {...register("lastName", {
@@ -304,17 +308,17 @@ const WorkPage = () => {
                     isInvalid={!!errors.lastName}
                     required
                     type="text"
-                    placeholder="Last Name"
+                    placeholder="Nachname"
                   />
                   <Form.Control.Feedback type="invalid">
-                    Please provide your last name
+                    Bitte geben Sie Ihren Nachnamen an
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
               <Col lg={12} className="mx-auto">
                 <FloatingLabel
                   controlId="floatingEmail"
-                  label="E-Mail Address"
+                  label="E-Mail Adresse"
                   className="mb-4"
                 >
                   <Form.Control
@@ -328,60 +332,60 @@ const WorkPage = () => {
                     isInvalid={!!errors.email}
                   />
                   <Form.Control.Feedback type="invalid">
-                    Please provide your e-mail address
+                    Bitte geben Sie Ihre E-Mail Adresse an
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
               <Col lg={12} className="mx-auto">
                 <FloatingLabel
                   controlId="floatingCompany"
-                  label="Company"
+                  label="Unternehmen"
                   className="mb-4"
                 >
                   <Form.Control
                     required
                     type="text"
-                    placeholder="Company"
+                    placeholder="Unternehmen"
                     {...register("company", {
                       required: true,
                     })}
                     isInvalid={!!errors.message}
                   />
                   <Form.Control.Feedback type="invalid">
-                    Please provide your company
+                    Bitte geben Sie Ihr Unternehmen an
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
               <Col lg={12} className="mx-auto">
                 <FloatingLabel
                   controlId="floatingBudget"
-                  label="Expected Budget"
+                  label="Erwartetes Budget"
                   className="mb-4"
                 >
                   <Form.Control
                     required
                     type="text"
-                    placeholder="Expected Budget"
+                    placeholder="Erwartetes Budget"
                     {...register("budget", {
                       required: true,
                     })}
                     isInvalid={!!errors.message}
                   />
                   <Form.Control.Feedback type="invalid">
-                    Please provide your budget
+                    Bitte geben Sie Ihr Budget an
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
               <Col lg={12} className="mx-auto">
                 <FloatingLabel
                   controlId="floatingTextarea"
-                  label="How can we help you?"
+                  label="Wie können wir Ihnen helfen?"
                   className="mb-4"
                 >
                   <Form.Control
                     required
                     as="textarea"
-                    placeholder="How can we help you?"
+                    placeholder="Wie können wir Ihnen helfen?"
                     style={{ height: "150px" }}
                     {...register("message", {
                       required: true,
@@ -389,7 +393,7 @@ const WorkPage = () => {
                     isInvalid={!!errors.message}
                   />
                   <Form.Control.Feedback type="invalid">
-                    Please provide your message
+                    Bitte geben Sie Ihre Nachricht an
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </Col>
@@ -401,7 +405,7 @@ const WorkPage = () => {
                   position="bottom-center"
                 >
                   <Toast bg="success" className="text-white" show={alert}>
-                    <Toast.Body>Thank you for your message 🥰</Toast.Body>
+                    <Toast.Body>Danke für Ihre Nachricht 🥰</Toast.Body>
                   </Toast>
                 </ToastContainer>
                 <Button
@@ -410,15 +414,15 @@ const WorkPage = () => {
                   variant="primary"
                   className="mt-3 mb-4"
                 >
-                  Submit
+                  Senden
                 </Button>
               </Col>
             </Row>
           </Form>
 
           <p className="fst-italic">
-            Just want to say “Hello”?
-            <Link to="/contact">Click here to contact us</Link>
+            Möchten Sie nur 'Hallo' sagen?{" "}
+            <Link to="/contact">Klicken Sie hier, um uns zu kontaktieren!</Link>
           </p>
         </Row>
       </Container>

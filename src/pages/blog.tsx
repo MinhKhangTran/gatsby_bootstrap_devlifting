@@ -14,6 +14,7 @@ import { BLOCKS } from "@contentful/rich-text-types";
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 import Moment from "react-moment";
 import "moment/locale/de";
+import CTA from "../components/CTA";
 
 const options = {
   renderNode: {
@@ -37,7 +38,10 @@ const BlogPage = ({ data }: { data: BlogAndLangQuery }) => {
 
   return (
     <Layout>
-      <SEO title="Blog" description="A curated list of all my blog posts" />
+      <SEO
+        title="Blog"
+        description="Eine kuratierte Liste aller meiner Blogbeiträge"
+      />
       <Container id="blog">
         <h1 className="text-uppercase text-primary fw-bold mt-3">
           Aus dem Blog
@@ -79,6 +83,7 @@ const BlogPage = ({ data }: { data: BlogAndLangQuery }) => {
           })}
         </Row>
       </Container>
+      <CTA />
     </Layout>
   );
 };

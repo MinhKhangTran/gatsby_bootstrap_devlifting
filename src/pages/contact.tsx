@@ -66,8 +66,8 @@ const ContactPage = () => {
     return (
       <Layout>
         <SEO
-          title="Contact"
-          description="Contact us and we will get back to you as soon as possible"
+          title="Kontakt"
+          description="Nehmen Sie Kontakt mit uns auf und wir werden uns so schnell wie möglich bei Ihnen melden!"
         />
         <Container id="contact" className="my-5">
           <Row className="align-items-center">

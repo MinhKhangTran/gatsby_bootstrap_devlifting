@@ -18,8 +18,8 @@ const AboutPage = () => {
     return (
       <Layout>
         <SEO
-          title="About"
-          description="Learn more about DevLifting and the goals here"
+          title="Über uns"
+          description="Hier erfahren Sie mehr über DevLifting und die Ziele"
         />
         <Container id="about" className="my-4">
           <Row className="">

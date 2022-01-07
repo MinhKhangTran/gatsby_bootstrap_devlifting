@@ -7,9 +7,9 @@ const siteUrl = process.env.SITE_URL || `http://localhost:8000/`;
 module.exports = {
   siteMetadata: {
     siteUrl: "https://devlifting.com",
-    title: "Our heavy lifting will improve your web presence!",
+    title: "Unsere Aufgabe ist es ihre Webpräsenz aufzubauen!",
     description:
-      "DevLifting is your freelancer for creating accessible and conversion optimized websites.",
+      "DevLifting ist Ihr Freelancer für die Erstellung barrierefreier und konversionsoptimierter Websites.",
     keywords: ["bootstrap", "gatsby", "devLifting"],
     author: "@devLifting_",
   },
