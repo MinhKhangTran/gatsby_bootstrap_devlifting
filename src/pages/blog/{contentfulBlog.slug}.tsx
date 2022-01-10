@@ -14,9 +14,7 @@ import SEO from "../../components/Seo";
 import CTA from "../../components/CTA";
 
 const options = {
-  renderMark: {
-    [MARKS.ITALIC]: (text: string) => <span className="bild_desc">{text}</span>,
-  },
+
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
       const { gatsbyImageData, description } = node.data.target;
@@ -28,7 +26,7 @@ const options = {
             alt={description}
             className="my-3"
           />
-          <p className="fst-italic text-secondary bild_desc">{description}</p>
+          <p className="fw-light text-secondary bild_desc">{description}</p>
         </>
       );
     },
